@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    background-color: ;
 }
 
 
@@ -95,12 +94,14 @@ p{
 }
 
 .grid1, .grid2, .grid3 {
-    border-radius: 20px;
+    padding-top: 20px;
+    border-radius: 15px;
+   
 
     transition: border-color 0.3s ease, border-radius 0.3s ease;
-    text-align: center;
+   text-align: center;
     
-    width: 300px; 
+    width: 15rem; 
     height: 380px; }
 
  .grid1:hover, .grid2:hover, .grid3:hover {
@@ -115,6 +116,20 @@ p{
         width: 3rem;
         height: auto;
     }
+    .skye{
+        width: 7rem;
+        height: auto;
+    }
+    .work{
+       
+
+       
+
+        width: 200px;
+        height: 200px;
+       
+    }
+    
         
 .grid1 {
     grid-area: grid1;
@@ -150,12 +165,10 @@ p{
   
 
     text-align: center;
-   
-    
-    
-   
+
     
 }
+
 .skill1:hover, .skill2:hover, .skill3:hover, .skill4:hover,.skill5:hover{
     transition: transform 0.3s ease;
     transform: scale(1.1);
