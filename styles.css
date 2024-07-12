@@ -21,7 +21,7 @@ html{
     position: sticky;
     z-index: 1000;
     top: 0;
-   
+
    
     
 }
@@ -82,12 +82,7 @@ p{
     background-color: #d8bdbd;
     margin-bottom: 500px;
 
-h1~p:hover{
 
-
-  background-color: #e0cfd0;
-
-}
    
 }
 .section3{
@@ -243,8 +238,56 @@ h1~p:hover{
     
 
 
-#nav-contact ,#nav-projects,#nav-skills{
+ #nav-projects,#nav-skills{
     padding-top:100px; 
     background-color: #d8bdbd;;
   
+}
+
+#nav-contact{
+   
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+   
+    
+}
+#nav-contact:hover{
+    box-shadow: inset 6px 3px 21px rgb(214, 195, 195);
+
+}
+ #nav-contact form {
+  
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#nav-contact input,
+#nav-contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#nav-contact button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nav-contact button:hover {
+    background-color: #0056b3;
+}
+h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+   text-align: center;
+}
+#me{
+    background-color: #f8f8f8;
 }
