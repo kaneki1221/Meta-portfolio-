@@ -110,6 +110,7 @@ p{
 
  .grid1:hover, .grid2:hover, .grid3:hover {
     transition: transform 0.2s ease;
+    box-shadow: 20px 20px 20px 1px #131210;
     transform: scale(1.1);
     
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1)inset, -10px -10px -10px rgb(230, 230, 230) inset ;
@@ -138,12 +139,14 @@ p{
 .grid1 {
     grid-area: grid1;
     background-color: #ffffff;
+    margin-right: 100px;
     
 }
 
 .grid2 {
     grid-area: grid2;
     background-color: #ffffff;
+    margin-right: 100px;
 }
 
 .grid3 {
@@ -168,29 +171,34 @@ p{
     height: 200px;
     border-radius: 10px;
     padding-top: 80px;
-
     text-align: center;
-    margin-left: 10px;
-    margin-bottom: 50px;
-    margin-right: 10px;
-
     
 }
 .skill1{
     grid-row: 1;
     grid-column: 1;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
 }
 .skill2{
     grid-row: 1;
     grid-column: 2;
+    margin-right: 100px;
+    margin-top: 100px;
 }
 .skill3{
     grid-row: 1;
     grid-column: 3;
+    margin-right: 300px;
+    margin-top: 100px;
 }
 .skill4{
     grid-row: 2;
     grid-column: 1;
+    margin-left: 300px;
+    margin-right: 100px;
 }
 .skill5{
     grid-row: 2;
@@ -199,6 +207,7 @@ p{
 .skill6{
     grid-row: 2;
     grid-column: 3;
+    margin-right: 300px;
 }
 
 
