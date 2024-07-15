@@ -54,7 +54,8 @@ html{
 }
 .logo:hover{
     color: #5e276e; 
-
+    transform: translate(139px ,210px);
+    transition: 1s ease-in;
 }
 h1{
   
