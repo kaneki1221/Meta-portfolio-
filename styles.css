@@ -9,39 +9,95 @@ html {
 }
 .header-container{
     width: 100%;
+    
 
 }
+
+
+    
+    
+
+/* CSS */
+.nav-item {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #000; /* Change this to your desired text color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Change this to your desired underline color */
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    color: #70cc33; /* Example color, you can choose any color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+#header-main{
+    /* background-color: #333; */
+
+}
+
 
 .wrapper {
-    width: 65%;
+    max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
-   
-   
 }
+
 .header-inner{
     position: sticky;
     display: flex;
     justify-content: space-between;
+    /* background-color: #333; */
+    color: #000000;
    
   
 }
-.nav-list{
-    display: flex;
-    justify-content: center;
-    gap: 20px;}
+.nav-list a{
+    color: #000000;
+}
+    
  
-    .nav-list a {
-        color: black;
-        
-        text-decoration: none; /* Removes underline */
+    .nav-list {
+       
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
     }
-    .nav-list a:hover {
-        color: rgba(88, 53, 170, 0.657);
-        font-size: 1.2rem;
-        
-        text-decoration: none; /* Removes underline */
+    
+    .nav-item {
+        margin: 0 15px;
+        font-size: 1rem;
+        color: #fff; /* Default text color */
+        text-decoration: none;
+        transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
     }
+   
+
 .section1{
     width: 130vh ;
     margin-top: 15%;
