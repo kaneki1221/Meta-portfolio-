@@ -258,7 +258,7 @@ html {
 }
 .card>img{
    
-    width: 100%; /* Make the image take full width of the card */
+    width: 60%; /* Make the image take full width of the card */
   height: auto; /* Keep the aspect ratio */
   object-fit: contain; /* Ensure the entire image fits within the specified area */
   padding: 5px; /* Optional: Add padding around the image */

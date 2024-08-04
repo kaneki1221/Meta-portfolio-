@@ -55,7 +55,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    width: 250px;
+    width: 320px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -83,6 +83,17 @@
   .card p {
     color: #555;
   }
+
+  .row img{
+    width: 50px;
+  }
+  .btn :hover{
+    width: 60px;
+    transition: 0.3s ease-in;
+    transform: scale(1,1);
+ 
+  }
+  
   
   @media (max-width: 768px) {
     .card {
