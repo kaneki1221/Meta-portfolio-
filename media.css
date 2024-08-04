@@ -11,3 +11,32 @@
         flex-direction: column;
     }
 }
+
+
+@media (max-width: 768px) {
+    .skill-item {
+        flex: 1 1 calc(50% - 1rem); /* Adjust for spacing on medium screens */
+        max-width: calc(50% - 1rem); /* Adjust for spacing on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-item {
+        flex: 1 1 calc(100% - 1rem); /* Full width minus spacing on small screens */
+        max-width: calc(100% - 1rem); /* Full width minus spacing on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 1rem); /* Adjust for spacing on medium screens */
+        max-width: calc(50% - 1rem); /* Adjust for spacing on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: calc(100% - 1rem); /* Full width minus spacing on small screens */
+        max-width: calc(100% - 1rem); /* Full width minus spacing on small screens */
+    }
+}
