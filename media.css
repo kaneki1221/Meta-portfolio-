@@ -1,0 +1,13 @@
+@media (max-width: 1079px) {
+    span{
+        display:flex ;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    .header-inner{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
