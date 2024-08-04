@@ -49,3 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //     nextButton.click();
     // }, 3000); 
 });
+
+UIkit.sticky(element, options); 
+

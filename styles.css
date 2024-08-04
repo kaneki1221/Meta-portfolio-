@@ -42,10 +42,10 @@ html {
         
         text-decoration: none; /* Removes underline */
     }
-.section{
+.section1{
     width: 130vh ;
-    
     margin-top: 15%;
+    margin-bottom: 15%;
 }
 #heading{
     display: flex;
@@ -211,9 +211,11 @@ html {
     }
     
     .project-card {
-        min-width: 300px;
+        min-width: 400px;
         margin: 0 10px;
         box-sizing: border-box;
+        margin-left: 150px;
+        margin-left:150px ;
     }
     
     .carousel-button {
@@ -236,4 +238,36 @@ html {
         right: 10px;
     }
     
+  /* ver */
+/* Certificates Section Wrapper */
+.education .tree {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.education .node {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.education .details {
+    font-size: 0.9rem;
+    color: #777;
+}
+.card>img{
    
+    width: 100%; /* Make the image take full width of the card */
+  height: auto; /* Keep the aspect ratio */
+  object-fit: contain; /* Ensure the entire image fits within the specified area */
+  padding: 5px; /* Optional: Add padding around the image */
+  background-color: #ffffff;
+} 
+/* heading certi */
+.certificates .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
