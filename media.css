@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
 @media (max-width: 1079px) {
     span{
         display:flex ;
@@ -101,3 +102,27 @@
       margin: 10px 0;
     }
   }
+ 
+  @import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+
+
+  .main-tool-bar {
+    height: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5f1b1b;
+    position: sticky;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transform: translateY(0); /* Default state */
+    transition: transform 0.4s ease, height 0.4s ease; /* Transition for height and transform */
+  }
+  
+  .main-tool-bar--scrolled {
+    height: 40px; /* Reduced height */
+  }
+  

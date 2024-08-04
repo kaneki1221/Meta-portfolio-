@@ -13,7 +13,6 @@ html {
 
 }
 
-
     
     
 
@@ -54,11 +53,24 @@ html {
     padding: 0;
     white-space: nowrap;
 }
-#header-main{
-    /* background-color: #333; */
 
-}
+/* .header-main {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transition: top 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1000; 
 
+  } */
+  .header-main.hidden {
+    top: -60px; /* Adjust based on header height */
+  }
+  /* Box shadow on scroll */
+  .header-main.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
 .wrapper {
     max-width: 1200px;
