@@ -90,18 +90,18 @@ ScrollTrigger.create({
 
     if (currentScrollTop <= 0) {
       // At the top of the page
-      gsap.to(header, { y: 0, duration: 0.2, ease: "power1.out" });
+      gsap.to(header, { y: 0, duration: 0.3, ease: "power1.out" });
     } else if (currentScrollTop > lastScrollTop) {
       // Scrolling down
-      gsap.to(header, { y: -header.offsetHeight, duration: 0.2, ease: "power1.out" });
+      gsap.to(header, { y: -header.offsetHeight, duration: 0.3, ease: "power1.out" });
     } else {
       // Scrolling up
-      gsap.to(header, { y: 0, duration: 0.2, ease: "power1.out" });
+      gsap.to(header, { y: 0, duration: 0.3, ease: "power1.out" });
 
       // Set a timeout to hide the header after a delay
       timeoutId = setTimeout(() => {
-        gsap.to(header, { y: -header.offsetHeight, duration: 0.1, ease: "power1.out" });
-      }, 500); // Adjust the delay as needed
+        gsap.to(header, { y: -header.offsetHeight, duration: 0.3, ease: "power1.out" });
+      }, 2000); // Adjust the delay as needed
     }
 
     lastScrollTop = currentScrollTop;

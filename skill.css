@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+* {
+  transition: all 0.3s ease-out;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 10px;
+}
+
+h2 {
+  color: #262626;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #00838d;
+  padding-bottom: 5px;
+}
+
+.skill-item {
+  display: block;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 12px 0;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  transition: all 0.3s ease-out;
+  color: #ddd;
+ 
+
+}
+
+.skill-item .logo {
+  width: 32px;
+  height: 32px;
+  background-color: #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.skill-item h3 {
+    color: #00838d;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.skill-item:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(38, 38, 38, 0.3);
+  transform: translateY(-4px);
+  color: #00838d;
+}
+
+
+.column + .column {
+  border-left: 1px solid #ddd;
+  padding-left: 20px;
+}
+
+.column {
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
