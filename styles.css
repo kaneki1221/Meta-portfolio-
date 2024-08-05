@@ -74,15 +74,7 @@ html {
     padding: 20px;
 }
 
-.header-inner{
-    position: sticky;
-    display: flex;
-    justify-content: space-between;
-    /* background-color: #333; */
-    background-color:  #49c5b6;
-   
-  
-}
+
 .nav-list a{
     color: #1F2833;
 }

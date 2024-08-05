@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// scroll-header
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,30 +83,49 @@ ScrollTrigger.create({
 
     // Add or remove box shadow based on scroll position
     if (currentScrollTop > 50) {
-      header.classList.add('scrolled');
+      header.classList.add('main-tool-bar--scrolled');
     } else {
-      header.classList.remove('scrolled');
+      header.classList.remove('main-tool-bar--scrolled');
     }
 
     if (currentScrollTop <= 0) {
       // At the top of the page
-      gsap.to(header, { y: 0, duration: 0.3, ease: "power1.out" });
+      gsap.to(header, { y: 0, duration: 0.2, ease: "power1.out" });
     } else if (currentScrollTop > lastScrollTop) {
       // Scrolling down
-      gsap.to(header, { y: -100, duration: 0.3, ease: "power1.out" });
+      gsap.to(header, { y: -header.offsetHeight, duration: 0.2, ease: "power1.out" });
     } else {
       // Scrolling up
-      gsap.to(header, { y: 0, duration: 0.3, ease: "power1.out" });
+      gsap.to(header, { y: 0, duration: 0.2, ease: "power1.out" });
 
       // Set a timeout to hide the header after a delay
       timeoutId = setTimeout(() => {
-        gsap.to(header, { y: -80, duration: 0.3, ease: "power1.out" });
-      }, 1500); // Adjust the delay as needed (2000ms = 2 seconds)
+        gsap.to(header, { y: -header.offsetHeight, duration: 0.1, ease: "power1.out" });
+      }, 500); // Adjust the delay as needed
     }
 
     lastScrollTop = currentScrollTop;
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // script.js
 
@@ -184,34 +205,34 @@ gsap.fromTo(
 // project
 
 document.addEventListener('DOMContentLoaded', () => {
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.next');
-  const prevButton = document.querySelector('.prev');
-  const slideWidth = slides[0].getBoundingClientRect().width + 20; // Adjust margin as needed
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+    const slideWidth = slides[0].getBoundingClientRect().width + 20; // Adjust margin as needed
 
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  const updateCarousel = (index) => {
-      const offset = -index * slideWidth;
-      track.style.transform = `translateX(${offset}px)`;
-  };
+    const updateCarousel = (index) => {
+        const offset = -index * slideWidth;
+        track.style.transform = `translateX(${offset}px)`;
+    };
 
-  nextButton.addEventListener('click', () => {
-      if (currentIndex < slides.length - 1) {
-          currentIndex += 1;
-      } else {
-          currentIndex = 0; // Loop back to the first slide
-      }
-      updateCarousel(currentIndex);
-  });
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < slides.length - 1) {
+            currentIndex += 1;
+        } else {
+            currentIndex = 0; // Loop back to the first slide
+        }
+        updateCarousel(currentIndex);
+    });
 
-  prevButton.addEventListener('click', () => {
-      if (currentIndex > 0) {
-          currentIndex -= 1;
-      } else {
-          currentIndex = slides.length - 1; // Loop back to the last slide
-      }
-      updateCarousel(currentIndex);
-  });
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex -= 1;
+        } else {
+            currentIndex = slides.length - 1; // Loop back to the last slide
+        }
+        updateCarousel(currentIndex);
+    });
 });

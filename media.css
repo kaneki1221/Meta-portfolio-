@@ -20,7 +20,36 @@
   }
 }
 
+.header-main {
+  height: 12vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #49c5b6;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transform: translateY(0); /* Default state */
+  transition: transform 0.3s ease, height 0.2s ease; /* Transition for height and transform */
+}
 
+.main-tool-bar--scrolled {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  height: 40px; /* Reduced height */
+}
+
+.header-inner{
+  position: fixed;
+  display: flex;
+ 
+  justify-content: space-between;
+ 
+ 
+
+}
 @media (max-width: 768px) {
     .skill-item {
         flex: 1 1 calc(50% - 1rem); /* Adjust for spacing on medium screens */
@@ -116,29 +145,7 @@
   @import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
 
 
-  .main-tool-bar {
-    height: 12vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:  #49c5b6;
-
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-    transform: translateY(0); /* Default state */
-    transition: transform 0.4s ease, height 0.4s ease; /* Transition for height and transform */
-   
-  }
-  
-  .main-tool-bar--scrolled {
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-    height: 40px; /* Reduced height */
-    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
-  }
+ 
   
 
 /* design */
