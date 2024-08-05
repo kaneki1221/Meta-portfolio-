@@ -102,19 +102,19 @@
       margin: 10px 0;
     }
   }
- 
+  @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
 
 
   .main-tool-bar {
-    height: 80px;
+    height: 90px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
+    background-color:  #49c5b6;
 
-    position: sticky;
+    position: fixed;
     width: 100%;
     left: 0;
     top: 0;
@@ -143,7 +143,7 @@ background-color: #1F2833;
 }
 
 .bg-projects{
-background-color: #000;
+  background-color: #1f1f1f;
 }
 
 #bg-edu{
@@ -189,6 +189,7 @@ body {
   position: relative;
   width: 100%;
   padding: 10px 0;
+  margin: 10px;
 }
 
 .line {
@@ -213,16 +214,18 @@ body {
 .timeline-item {
   position: relative;
   margin: 40px 0; /* Increased margin to add space between cards */
-  width: 100%;
+  width: 90%;
+  gap: 20px;
+
 }
 
 .timeline-item:nth-child(odd) {
-  padding-right: 50px;
+  padding-top: 10px;
   text-align: right;
 }
 
 .timeline-item:nth-child(odd) .horizontal-line {
-  right: 50%;
+  right: 40%;
 }
 
 .timeline-item:nth-child(even) {
@@ -250,4 +253,78 @@ body {
 
 .timeline-item:nth-child(even) .content {
   float: left;
+}
+
+/* timeline  */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f;
+  min-height: 100vh;
+  padding: 100px 0;
+  font-family: Jost;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 90%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: #1f1f1f;
+  -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+          box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+  border-radius: 5px;
+  color: white;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    width: 3px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
