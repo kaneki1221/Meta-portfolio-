@@ -12,43 +12,7 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
         });
     });
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
-    const slideWidth = slides[0].getBoundingClientRect().width;
 
-    let currentIndex = 0;
-
-    const updateCarousel = (index) => {
-        const offset = -index * slideWidth;
-        track.style.transform = `translateX(${offset}px)`;
-    };
-
-    nextButton.addEventListener('click', () => {
-        if (currentIndex < slides.length - 1) {
-            currentIndex += 1;
-        } else {
-            currentIndex = 0; // Loop back to the first slide
-        }
-        updateCarousel(currentIndex);
-    });
-
-    prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex -= 1;
-        } else {
-            currentIndex = slides.length - 1; // Loop back to the last slide
-        }
-        updateCarousel(currentIndex);
-    });
-
-    // Optional: Auto-slide
-    // setInterval(() => {
-    //     nextButton.click();
-    // }, 3000); 
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
@@ -127,7 +91,7 @@ ScrollTrigger.create({
       gsap.to(header, { y: 0, duration: 0.3, ease: "power1.out" });
     } else if (currentScrollTop > lastScrollTop) {
       // Scrolling down
-      gsap.to(header, { y: -80, duration: 0.3, ease: "power1.out" });
+      gsap.to(header, { y: -100, duration: 0.3, ease: "power1.out" });
     } else {
       // Scrolling up
       gsap.to(header, { y: 0, duration: 0.3, ease: "power1.out" });
@@ -216,3 +180,38 @@ gsap.fromTo(
     },
   }
 );
+
+// project
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.next');
+  const prevButton = document.querySelector('.prev');
+  const slideWidth = slides[0].getBoundingClientRect().width + 20; // Adjust margin as needed
+
+  let currentIndex = 0;
+
+  const updateCarousel = (index) => {
+      const offset = -index * slideWidth;
+      track.style.transform = `translateX(${offset}px)`;
+  };
+
+  nextButton.addEventListener('click', () => {
+      if (currentIndex < slides.length - 1) {
+          currentIndex += 1;
+      } else {
+          currentIndex = 0; // Loop back to the first slide
+      }
+      updateCarousel(currentIndex);
+  });
+
+  prevButton.addEventListener('click', () => {
+      if (currentIndex > 0) {
+          currentIndex -= 1;
+      } else {
+          currentIndex = slides.length - 1; // Loop back to the last slide
+      }
+      updateCarousel(currentIndex);
+  });
+});
