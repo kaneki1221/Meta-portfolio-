@@ -98,22 +98,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 gsap.registerPlugin(ScrollTrigger);
 
-let lastScrollTop = 0; // Keeps track of the last scroll position
+let lastScrollTop = 0;
 const header = document.querySelector('.main-tool-bar');
-let timeoutId = null; // For storing the timeout ID
+let timeoutId = null;
 
-// Initialize header position
 gsap.set(header, { y: 0 });
 
 ScrollTrigger.create({
-  start: "top top", // Trigger start
-  end: "bottom bottom", // Trigger end
+  start: "top top",
+  end: "bottom bottom",
   onUpdate: self => {
     let currentScrollTop = self.scroll();
 
     // Clear the previous timeout to reset the delay
     if (timeoutId) {
       clearTimeout(timeoutId);
+    }
+
+    // Add or remove box shadow based on scroll position
+    if (currentScrollTop > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
 
     if (currentScrollTop <= 0) {
@@ -129,9 +135,84 @@ ScrollTrigger.create({
       // Set a timeout to hide the header after a delay
       timeoutId = setTimeout(() => {
         gsap.to(header, { y: -80, duration: 0.3, ease: "power1.out" });
-      }, 2000); // Adjust the delay as needed (2000ms = 2 seconds)
+      }, 1500); // Adjust the delay as needed (2000ms = 2 seconds)
     }
 
     lastScrollTop = currentScrollTop;
   }
 });
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('lottie-animation');
+
+    // Load the Lottie animation
+    const animation = lottie.loadAnimation({
+        container: container, // The container where the animation will be rendered
+        renderer: 'svg',     // Use 'svg', 'canvas', or 'html' renderer
+        loop: true,          // Loop the animation
+        autoplay: true,      // Start playing the animation immediately
+        path: 'https://lottie.host/041c70e1-6871-4995-a422-4c1cde7a9559/xD2beFK0WV.json' // URL to the Lottie JSON file
+    });
+});
+
+
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.from(".animated-text", {
+        opacity: 0,
+        y: 50,
+        duration: 2,
+        ease: "power2.out",
+        stagger: 0.1, // Stagger animation for each word or letter
+        onComplete: () => console.log("Animation Complete!")
+    });
+});
+
+
+// Import GSAP and ScrollTrigger
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.set(".horizontal-line", { scaleX: 0 });
+gsap.set(".content", { autoAlpha: 0 });
+
+gsap.utils.toArray(".timeline-item").forEach((item, i) => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: item,
+      start: "top center+=100",
+      end: "bottom center-=100",
+      toggleActions: "play none none none",
+      markers: false,
+    },
+  });
+
+  tl.fromTo(
+    item.querySelector(".horizontal-line"),
+    { scaleX: 0 },
+    { scaleX: 1, duration: 0.5, transformOrigin: i % 2 === 0 ? "left center" : "right center" }
+  )
+    .fromTo(
+      item.querySelector(".content"),
+      { autoAlpha: 0, y: 50 },
+      { autoAlpha: 1, y: 0, duration: 0.5 },
+      "-=0.3"
+    );
+});
+
+gsap.fromTo(
+  ".line",
+  { height: 0 },
+  {
+    height: "100%",
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".timeline",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  }
+);

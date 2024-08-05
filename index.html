@@ -34,25 +34,25 @@
 </header>
 <div class="scrollable-area">
 
-    <!-- About section here  -->
-    <section id="about" class="about-section wrapper section1  ">
+    <!-- About section here  --> <div class="bg-about" >
+    <section id="about about-me" class="about-section wrapper section1  ">
         <div id="left-side">
         <header id="heading">
-            <h1>About Me</h1>
+            <h1 class="about-me animated-text">About Me</h1>
         </header>
-        <p>
-            <!-- Your about content goes here -->
-            I am Sumith Shinde, a passionate front-end developer with a keen interest in web technologies,
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, minus vel atque corporis ipsam voluptatem omnis tempora provident, velit explicabo voluptas. A reiciendis ratione hic mollitia architecto voluptas corporis ut. gaming, and continuous learning.
-        </p>
+        <section class="about-me">
+            <p> <h4 class="animated-text">I am a passionate front-end developer with a strong interest in creating engaging user experiences. <br>I enjoy coding, learning new technologies, and staying updated with industry trends to build innovative web applications.</h4></> </p>
+        </section>
     </div>
-    <div id="right-side">
-        <img src="/images/work-in-progress.gif" alt="">
-    </div>
-    </section>
+  
+        <div id="lottie-animation" ></div>
 
+  
+    </section>
+</div>
 
     <!-- Skills  -->
+     <div class="bg-skills">
     <section id="skills" class="skills-section wrapper section1 ">
 
         <div class="skills-wrapper">
@@ -93,11 +93,11 @@
             </div>
         </div>
     </section>
-
+</div>
     <!-- Projects -->
 
-    </section>
-
+    
+<div class="bg-projects">
     <section id="projects" class="projects-section wrapper section1 ">
         <div class="projects-wrapper">
             <header class="text-center mb-5">
@@ -145,13 +145,15 @@
             </div>
         </div>
     </section>
-
+</div>
     <!-- certificate -->
-    <header class="text-center mb-5 wrapper ">
-        <h2>Certificate</h2>
-    </header>
      
-    <section class="certificates  wrapper">
+   
+     <div class="bg-certificate ">
+    <section class="certificates  wrapper" id="certificates" >
+        <header class="text-center mb-5 wrapper">
+            <h2>Certificate</h2>
+        </header>
        
        
         <div class="card">
@@ -214,12 +216,12 @@
           
        
       </section>
-     
+    </div>
     <!-- education -->
 
-
-    <section id="education" class="section bg-light wrapper section1 ">
-        <div class="row">
+<!-- <div id="bg-edu">
+    <section id="education " class="section bg-light wrapper">
+        <div class="row" >
             <div class="col-md-8 offset-md-2">
                 <div class="education text-center">
                     <h2>Education</h2>
@@ -245,7 +247,82 @@
             </div>
         </div>
     </section>
-   <!-- contact me  -->
+</div> -->
+
+<!-- edu -->
+
+<div id="bg-edu">
+    <div class="wrapper section1">
+      <div class="timeline">
+        <div class="line"></div>
+        
+        <!-- Project Section -->
+        <div class="timeline-item">
+          <div class="horizontal-line"></div>
+          <div class="content">
+            <h3>Project 1</h3>
+            <p>Description of project...</p>
+            <p>Year: 2018</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="horizontal-line"></div>
+          <div class="content">
+            <h3>Project 2</h3>
+            <p>Description of project...</p>
+            <p>Year: 2019</p>
+          </div>
+        </div>
+        
+        <!-- Work Experience Section -->
+        <div class="timeline-item">
+          <div class="horizontal-line"></div>
+          <div class="content">
+            <h3>Microsoft</h3>
+            <p>Job Role: Software Developer</p>
+            <p>Duration: 2020 - 2021</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="horizontal-line"></div>
+          <div class="content">
+            <h3>Tech Mahindra</h3>
+            <p>Job Role: Technical Support</p>
+            <p>Duration: 2020 - 2021</p>
+          </div>
+        </div>
+            <!-- Education Section -->
+            <div class="timeline-item">
+                <div class="horizontal-line"></div>
+                <div class="content">
+                  <h3>Bachelor's Degree in Computer Science</h3>
+                  <p>Institution: [Your University]</p>
+                  <p>Graduation Year: 2019</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="horizontal-line"></div>
+                <div class="content">
+                  <h3>High School Diploma</h3>
+                  <p>Institution: [Your High School]</p>
+                  <p>Graduation Year: 2015</p>
+                </div>
+              </div>
+              
+              <!-- Additional timeline items can be added similarly -->
+            </div>
+          </div>
+        </div>  
+
+
+
+
+
+
+
+
+<!-- contact -->
+   <div class="bg-contact">
    <section id="contact wrapper" class="py-5">
     <div class="container wrapper ">
       <h2 class="text-center mb-4">Contact Me</h2>
@@ -282,10 +359,18 @@
       </div>
     </div>
   </section>
-  </div>
+  
+</div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.12/lottie.min.js"></script>
+
+
+
+    
+
 </body>  
 </html>

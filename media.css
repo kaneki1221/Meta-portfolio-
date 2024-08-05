@@ -48,7 +48,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    background-color: #555;
+    background-color:  #49c5b6;
   }
   
   .card {
@@ -112,7 +112,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #5f1b1b;
+    background-color: #000;
+
     position: sticky;
     width: 100%;
     left: 0;
@@ -120,9 +121,133 @@
     z-index: 1000;
     transform: translateY(0); /* Default state */
     transition: transform 0.4s ease, height 0.4s ease; /* Transition for height and transform */
+   
   }
   
   .main-tool-bar--scrolled {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
     height: 40px; /* Reduced height */
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
   }
   
+
+/* design */
+
+.bg-about{
+  background-color:  #49c5b6;
+
+}
+
+.bg-skills{
+background-color: #1F2833;
+}
+
+.bg-projects{
+background-color: #000;
+}
+
+#bg-edu{
+background-color: #35A29E;
+}
+
+
+.bg-contact{
+
+  background-color: #ffffff;
+}
+.bg-certificate{
+  background-color:  #49c5b6;
+}
+
+
+
+/* edu */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+#bg-edu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e0e0e0;
+  padding: 50px 0; /* Added padding for top and bottom gap */
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.line {
+  position: absolute;
+  width: 4px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.horizontal-line {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #333;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 40px 0; /* Increased margin to add space between cards */
+  width: 100%;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: 50px;
+  text-align: right;
+}
+
+.timeline-item:nth-child(odd) .horizontal-line {
+  right: 50%;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) .horizontal-line {
+  left: 50%;
+}
+
+.timeline-item .content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: calc(45% - 40px); /* Adjusted width for better spacing */
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) .content {
+  float: right;
+}
+
+.timeline-item:nth-child(even) .content {
+  float: left;
+}

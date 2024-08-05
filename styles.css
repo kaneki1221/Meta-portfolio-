@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    
 }
 html {
     scroll-behavior: smooth;
@@ -33,7 +34,7 @@ html {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #000; /* Change this to your desired underline color */
+    background-color: #45A29E; /* Change this to your desired underline color */
     transition: width 0.3s ease, left 0.3s ease;
     transform: translateX(-50%);
 }
@@ -54,16 +55,7 @@ html {
     white-space: nowrap;
 }
 
-/* .header-main {
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    transition: top 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    z-index: 1000; 
 
-  } */
   .header-main.hidden {
     top: -60px; /* Adjust based on header height */
   }
@@ -73,7 +65,7 @@ html {
   }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 90%;
     margin: 0 auto;
     padding: 20px;
@@ -89,7 +81,7 @@ html {
   
 }
 .nav-list a{
-    color: #000000;
+       color: aliceblue;
 }
     
  
@@ -110,11 +102,14 @@ html {
     }
    
 
-.section1{
-    width: 130vh ;
-    margin-top: 15%;
-    margin-bottom: 15%;
-}
+    .section1 {
+        height: 100vh; /* 100% of the viewport height */
+        display: flex; /* Optional: Center content */
+        align-items: center; /* Optional: Center content vertically */
+        justify-content: center; /* Optional: Center content horizontally */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+        padding-bottom: 20vh;
+    }
 #heading{
     display: flex;
     justify-content: center;
@@ -122,16 +117,22 @@ html {
 }
 .about-section{
     display: flex;
+    align-items: center;
+    background-color:  #49c5b6;
+    
 }
-    #right-side img{
-        width: 300px;
-    }
+
+#lottie-animation{
+
+    width: 101vh;
+    
+}
 
     /* skills */
 
     .skills-section {
         padding: 2rem;
-        background-color: #f4f4f4;
+        background-color: #1F2833;
     }
     
     .skills-wrapper {
@@ -146,7 +147,7 @@ html {
     
     .skills-header h2 {
         font-size: 2rem;
-        color: #333;
+        color: #fff7f7;
     }
     
     /* Flexbox Container for Skills */
@@ -182,7 +183,10 @@ html {
 
     .projects-section {
         padding: 2rem;
-        background-color: #f4f4f4;
+        /* background-color: #503f3f; */
+        background-color: #000;
+        flex-wrap: wrap;
+        color: #ddd;
     }
     
     .projects-wrapper {
@@ -191,13 +195,11 @@ html {
         padding: 0 1rem;
     }
     
-    .projects-header {
-        margin-bottom: 2rem;
-    }
-    
+   
     .projects-header h2 {
         font-size: 2rem;
-        color: #333;
+            
+        margin-bottom: 2rem;
     }
     
     /* Flexbox Container for Projects */
@@ -308,8 +310,10 @@ html {
     
   /* ver */
 /* Certificates Section Wrapper */
+
 .education .tree {
     margin-top: 40px;
+    /* padding-top: 40px; */
     text-align: left;
 }
 
@@ -338,4 +342,18 @@ html {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
+  .certificates{
+    width: auto;
+    padding-bottom: 50vh;
+    
+  }
   
+
+  #education{
+    /* margin-bottom: 20vh ; */
+    padding-bottom: 20vh;
+    background-color:  #49c5b6;
+  }
+  #contact{
+    padding-bottom: 20vh;
+  }
