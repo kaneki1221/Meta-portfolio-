@@ -419,21 +419,7 @@ body {
 @media (max-width: 480px) {
 
 
-  
-.container-skill {
- 
-display: block;
-  height: auto;
-  display: flex;
-  
-  
-  align-items: flex-start;
-  justify-content: space-around;
-  padding: 20px;
- padding-top: 10vh;
-  padding-bottom: 20vh;
-  width: 100%;
-}
+
 #hamburger{
   display: block;
   position: absolute;
