@@ -42,7 +42,7 @@ html {
     transform: translateX(-50%);
 }
 
-.logo{
+.name{
     font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
     color: #12180e; /* Example color, you can choose any color */
