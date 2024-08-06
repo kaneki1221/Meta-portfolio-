@@ -62,60 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // scroll-header
 
 
-gsap.registerPlugin(ScrollTrigger);
-
-let lastScrollTop = 0;
-const header = document.querySelector('.main-tool-bar');
-let timeoutId = null;
-
-gsap.set(header, { y: 0 });
-
-ScrollTrigger.create({
-  start: "top top",
-  end: "bottom bottom",
-  onUpdate: self => {
-    let currentScrollTop = self.scroll();
-
-    // Clear the previous timeout to reset the delay
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
-
-    // Add or remove box shadow based on scroll position
-    if (currentScrollTop > 50) {
-      header.classList.add('main-tool-bar--scrolled');
-    } else {
-      header.classList.remove('main-tool-bar--scrolled');
-    }
-
-    if (currentScrollTop <= 0) {
-      // At the top of the page
-      gsap.to(header, { y: 0, duration: 0.3, ease: "power1.out" });
-    } else if (currentScrollTop > lastScrollTop) {
-      // Scrolling down
-      gsap.to(header, { y: -header.offsetHeight, duration: 0.3, ease: "power1.out" });
-    } else {
-      // Scrolling up
-      gsap.to(header, { y: 0, duration: 0.3, ease: "power1.out" });
-
-      // Set a timeout to hide the header after a delay
-      timeoutId = setTimeout(() => {
-        gsap.to(header, { y: -header.offsetHeight, duration: 0.3, ease: "power1.out" });
-      }, 2000); // Adjust the delay as needed
-    }
-
-    lastScrollTop = currentScrollTop;
-  }
-});
-
-
-
-
-
-
-
-
-
 
 
 

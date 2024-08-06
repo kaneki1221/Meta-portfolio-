@@ -17,25 +17,32 @@
    <link rel="stylesheet" href="skill.css">
 </head>
 <body>
-    <header class="header-main main-tool-bar">
-        <!-- <div class="scrollable-area"></div> -->
-    <div class="header-inner wrapper">
-        <span class="logo"><Strong>&lt;Sumith Shinde/&gt;</Strong></span>
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <!-- <li><a href="#home" class="nav-item">Home</a></li> -->
-                <li><a href="#about" class="nav-item list1">About</a></li>
-                <li><a href="#skills" class="nav-item">Skills</a></li>
-                <li><a href="#projects" class="nav-item">Projects</a></li>
-                <li><a href="#certificates" class="nav-item">Certificates</a></li>
-                <li><a href="#contact" class="nav-item">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<div class="scrollable-area">
 
-    <!-- About section here  --> <div class="bg-about" >
+
+  <header class="header-main main-tool-bar">
+    <!-- <div class="scrollable-area"></div> -->
+<div class="header-inner wrapper">
+    <span class="logo"><Strong>&lt;Sumith Shinde/&gt;</Strong></span>
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <!-- <li><a href="#home" class="nav-item">Home</a></li> -->
+            <li><a href="#about" class="nav-item list1">About</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#certificates" class="nav-item">Certificates</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+</header>
+
+
+
+<div class="scrollable-container">
+
+    <!-- About section here  -->
+      <div class="bg-about" > 
+
     <section id="about about-me" class="about-section wrapper section1  ">
         <div id="left-side">
         <header id="heading">
@@ -46,17 +53,24 @@
         </section>
     </div>
   
-        <div id="lottie-animation" ></div>
+        <div id="lottie-animation" >
+
+        </div>
 
   
     </section>
-</div>
+  </div>
+
 
     <!-- Skills  -->
 
      <div class="bg-skills">
-      <div class="container">
+      <div class="container-skill wrapper"> 
+        <div class="text-center mb-5 wrapper">
+          <h2>Skills</h2>
+        </div>
         <div class="column">
+          
           <h2>Web-Technologies</h2>
           <a class="skill-item" href="#">
             <div class="logo"></div>
@@ -210,74 +224,20 @@
 
 
 
-    <!-- Projects -->
-
-    
- <!-- <div class="bg-projects ">
-    <section id="projects" class=" projects-section wrapper section1 ">
-        <div class="projects-wrapper">
-            <header class="text-center mb-4">
-                <h2>Projects</h2>
-            </header>
-            <div class="carousel">
-                <button class="carousel-button prev"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/> </svg> </button>
-                <div class="carousel-container">
-                    <div class="carousel-track">
-                        <div class="project-card">
-                            <img src="images/123.png" alt="Project 1 Screenshot">
-                            <h3>Project Title 1</h3>
-                            <p>A brief description of what this project is about and what technologies were used.</p>
-                            <a href="https://example.com" target="_blank" class="btn">View Project</a>
-                        </div>
-                        <div class="project-card">
-                            <img src="images/123.png" alt="Project 2 Screenshot">
-                            <h3>Project Title 2</h3>
-                            <p>A brief description of what this project is about and what technologies were used.</p>
-                            <a href="https://example.com" target="_blank" class="btn">View Project</a>
-                        </div>
-                        <div class="project-card">
-                            <img src="images/123.png" alt="Project 2 Screenshot">
-                            <h3>Project Title 2</h3>
-                            <p>A brief description of what this project is about and what technologies were used.</p>
-                            <a href="https://example.com" target="_blank" class="btn">View Project</a>
-                        </div>
-                        <div class="project-card">
-                            <img src="images/123.png" alt="Project 2 Screenshot">
-                            <h3>Project Title 2</h3>
-                            <p>A brief description of what this project is about and what technologies were used.</p>
-                            <a href="https://example.com" target="_blank" class="btn">View Project</a>
-                        </div>
-                        <div class="project-card">
-                            <img src="images/123.png" alt="Project 2 Screenshot">
-                            <h3>Project Title 2</h3>
-                            <p>A brief description of what this project is about and what technologies were used.</p>
-                            <a href="https://example.com" target="_blank" class="btn">View Project</a>
-                        </div>
-
-                        
-                   </div>
-                </div>
-                <button class="carousel-button next"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" ba  ><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg> </button>
-            </div>
-        </div>
-    </section>
-</div>  --> 
-
-
 
 
     <!-- certificate -->
      
    
      <div class="bg-certificate ">
-    <section class="certificates  wrapper" id="certificates" >
+    <section class="certificates  wrapper " id="certificates" >
         <header class="text-center mb-5 wrapper">
             <h2>Certificate</h2>
         </header>
        
        
         <div class="card">
-          <img src="/images/Meta_lockup_positive primary_RGB.jpg " class="img-fluid" alt="Certificate 1">
+          <img src="/images/Meta_lockup_positive primary_RGB.jpg " alt="Certificate 1">
           <div class="card-content">
             <h5>  HTML and CSS in depth</h5>
             <p>Description or details about the certificate.</p>
@@ -344,6 +304,9 @@
 
 <!--This is the main container that contains the whole timeline.-->
 <section class="design-section">
+  <header class="text-center mb-5 wrapper">
+    <h1> Work-Experience and Education</h1>
+</header>
 <div class="timeline">
 
                   <div class="timeline-empty">
@@ -355,14 +318,14 @@
                    <div class="timeline-circle"></div>
                </div>
                <div class="timeline-component timeline-content">
-                <h3>Projects </h3>
+                <h4>Projects </h4>
                 <h5></h5>
                 <p>During this time, I engaged in extensive self-learning and project work to enhance my skills and stay abreast of industry trends.</p>
            </div>
            
                 <div class="timeline-component timeline-content">
-                    <h3>Meta Front End development Certified</h3>
-                         <h4>9x Certificatoins</h4>
+                    <h5>Meta Front End development Certified</h5>
+                         <h6>9x Certificatoins</h6>
                          <p> JavaScript,Html,Css,React,Version-control (Git ,Github)</p>
                 </div>
                 <div class="timeline-middle">
@@ -378,14 +341,14 @@
                    <div class="timeline-circle"></div>
                </div>
                <div class=" timeline-component timeline-content">
-                <h3>Course- Odin Project</h3> <h4> Web -development</h4>
+                <h5>Course- Odin Project</h5> <h6> Web -development</h6>
                 <p>JavaScript,HTML,CSS,Bootstrap,Tailwind</p>
                 
                
            </div>
            <div class="timeline-component timeline-content">
-            <h3>Tech Mahindra -Hyderabad </h3>
-                 <h4>Assocate -Analyst</h4>
+            <h5>Tech Mahindra -Hyderabad </h5>
+                 <h6>Assocate -Analyst</h6>
                  <p>2020 March -2021 Sep (1 year 6 months)</p>
         </div>
         <div class="timeline-middle">
@@ -401,7 +364,7 @@
            <div class="timeline-circle"></div>
        </div>
        <div class=" timeline-component timeline-content">
-        <h3>B.Tech-Bachelor of Technology </h3> <h4>Compute Science Engineering</h4>
+        <h5>B.Tech-Bachelor of Technology </h5> <h6>Compute Science Engineering</h6>
         <p>Vidaya jyothi Institute of Technology 2019</p>
         
        
@@ -415,7 +378,7 @@
 
 <div class="bg-contact">
   <section id="contact-wrapper" class="py-5">
-    <div class="container wrapper">
+    <div class="container-contact wrapper">
       <h2 class="text-center mb-4">Contact Me</h2>
       <div class="contact-content">
         <div class="social-media">
@@ -452,8 +415,8 @@
   </section>
 </div>
 
-
-
+</div>
+</div>
 
 
 

@@ -19,15 +19,13 @@
   
   }
 }
-
 .header-main {
-  height: 10vh;
+  height: 12vh;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #49c5b6;
-  
   position: fixed;
   width: 100%;
   left: 0;
@@ -35,6 +33,7 @@
   z-index: 100;
   transform: translateY(0); /* Default state */
   transition: transform 0.3s ease, height 0.2s ease; /* Transition for height and transform */
+  overflow: hidden; /* Hide overflow to prevent visibility issues */
 }
 
 .main-tool-bar--scrolled {
@@ -42,15 +41,30 @@
   height: 40px; /* Reduced height */
 }
 
-.header-inner{
-  position: fixed;
+.header-inner {
   display: flex;
- 
   justify-content: space-between;
- 
- 
-
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Ensure padding for spacing */
+  box-sizing: border-box; /* Include padding in width calculations */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .skill-item {
         flex: 1 1 calc(50% - 1rem); /* Adjust for spacing on medium screens */
@@ -157,7 +171,7 @@
 }
 
 .bg-skills{
-/* background-color: #1F2833; */
+  background-color: #1f1f1f;
 }
 
 .bg-projects{
@@ -366,3 +380,6 @@ body {
  }
  
 }
+
+/* scrol */
+
