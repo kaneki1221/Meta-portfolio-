@@ -20,7 +20,7 @@
   }
 }
 .header-main {
-  height: 12vh;
+  height: 7vh;
   text-align: center;
   display: flex;
   align-items: center;
@@ -49,18 +49,19 @@
   padding: 0 20px; /* Ensure padding for spacing */
   box-sizing: border-box; /* Include padding in width calculations */
 }
+.header-main.hidden {
+  top: -60px; /* Adjust based on header height */
+}
+/* Box shadow on scroll */
+.header-main.scrolled {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.header-container{
+  width: 100%;
+  background-color:  #49c5b6;
+  
 
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

@@ -9,12 +9,6 @@ html {
     scroll-behavior: smooth;
     
 }
-.header-container{
-    width: 100%;
-    background-color:  #49c5b6;
-    
-
-}
 
 
     
@@ -59,13 +53,6 @@ html {
 }
 
 
-  .header-main.hidden {
-    top: -60px; /* Adjust based on header height */
-  }
-  /* Box shadow on scroll */
-  .header-main.scrolled {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
 
 .wrapper {
     max-width: 1300px;
@@ -152,7 +139,7 @@ html {
 
 
 
-    
+
 
 /* Certificates Section Wrapper */
 
