@@ -28,12 +28,12 @@
   }
 }
 .header-main {
-  height: 9vh !important;
-  text-align: center;
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  background-color: #49c5b6;
+  background-color:  #49c5b6;
+  box-shadow: 1px 3px 5px #11806f;
 
   position: relative;
   width: 100%;
@@ -45,10 +45,6 @@
   overflow: hidden; /* Hide overflow to prevent visibility issues */
 }
 
-.main-tool-bar--scrolled {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-  height: 40px; /* Reduced height */
-}
 
 .header-inner {
   display: flex;
@@ -58,20 +54,6 @@
   padding: 0 20px; /* Ensure padding for spacing */
   box-sizing: border-box; /* Include padding in width calculations */
 }
-.header-main.hidden {
-  top: -60px; /* Adjust based on header height */
-}
-/* Box shadow on scroll */
-.header-main.scrolled {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.header-container{
-  width: 100%;
-  background-color:  #49c5b6;
-  
-
-}
-
 
 
 
@@ -374,8 +356,14 @@ body {
   }
 
   .header-main{
-    padding-top: 40px;
+    display: flex;
+    
+    
     height: auto;
+  }
+  .nav-list{
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -386,26 +374,34 @@ body {
 
 
   }
-  
+ .nav-item{
+    color: #ffffff !important;
+  }
   .nav-list{
-    display: none;
-    flex-wrap: wrap;
+  
+    color: #fff;
+
     margin-top: 10px;
+
     
+  }
+  .nav-list li{
+    flex-direction: column;
   }
  .name {
   display: none;
   margin-top: 1px;
-  color: #000000;
+  color: #ffffff;
   font-size: 1.5rem;
  
  }
  .header-main{
   display: flex;
-
+  width: 100%;
+  
   position: relative;
   flex-wrap: wrap;
-  height: auto;
+ background-color: #11806f;
   /* border-bottom: 2px solid #000000; */
 
   box-shadow: 10px 10px -90px #11806f;
@@ -418,23 +414,33 @@ body {
 
 @media (max-width: 480px) {
 
-
-
+  .main-nav {
+    display: none;
+  }
+  .main-nav.active {
+    display: flex;
+  }
 #hamburger{
   display: block;
   position: absolute;
-  top: 50%;
-  right: 10px; /* Position from the right edge */
-  transform: translateY(-50%); /* Center vertically */
+  top: 10%;
+  right: 10px;
   cursor: pointer;
-  width: 60px;
+  width: 70px;
 }
-.header-main{
-  display: flex;
-  justify-content: end;
+.header-inner{
+  height: auto;
+  background-color:  #49c5b6;
+  border: none;
+  
+}
+
+.nav-list{
+  flex-direction: column;
 }
 
 svg {
+  
 	width: 120px;
 }
 
@@ -508,3 +514,8 @@ svg:hover {
 #hamburger{
   width: 60px;
 }
+
+.nav-item{
+  color: #ffffff;
+}
+

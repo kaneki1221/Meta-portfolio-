@@ -104,11 +104,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // hamburger
 
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger');
-    const navList = document.querySelector('.nav-list');
-
-    hamburger.addEventListener('click', function() {
-      navList.classList.toggle('show');
+// scripts.js
+// scripts.js
+// scripts.js
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const mainNav = document.querySelector(".main-nav");
+  
+    hamburger.addEventListener("click", () => {
+      mainNav.classList.toggle("active");
     });
   });
+  
