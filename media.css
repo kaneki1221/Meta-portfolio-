@@ -29,20 +29,25 @@
 }
 .header-main {
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  background-color:  #49c5b6;
-  box-shadow: 1px 3px 5px #11806f;
+ align-items: center;
+ justify-content: center;
+ background-color:  #49c5b6;
+ box-shadow: 1px 3px 5px #11806f;
+ height: 80px;
+z-index: 100;
+ position: fixed;
+ width: 100%;
+ left: 0;
+ top: 0;
+ transition: ease 0.4s;
+ &--scrolled {
+   height: 40px;
+ }
 
-  position: relative;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  transform: translateY(0); /* Default state */
-  transition: transform 0.3s ease, height 0.2s ease; /* Transition for height and transform */
-  overflow: hidden; /* Hide overflow to prevent visibility issues */
+
+
 }
 
 
@@ -60,7 +65,13 @@
 @media (max-width: 768px) {
     .skill-item {
         flex: 1 1 calc(50% - 1rem); /* Adjust for spacing on medium screens */
-        max-width: calc(50% - 1rem); /* Adjust for spacing on medium screens */
+        max-width: calc(50% - 1rem);
+         /* Adjust for spacing on medium screens */      
+    }
+    .card{
+      width: 100px;
+      height: auto;
+      
     }
 }
 
@@ -102,7 +113,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    width: 230px;
+    width: 28vh;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }

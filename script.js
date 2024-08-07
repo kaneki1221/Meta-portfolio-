@@ -64,15 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
-
-
-
-
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -114,5 +105,53 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", () => {
       mainNav.classList.toggle("active");
     });
+  });
+  
+
+
+//   scroll
+
+
+
+
+const showAnim = gsap.from('.header-main', { 
+    yPercent: -100,
+    paused: true,
+    duration: 0.2
+  }).progress(1);
+  
+  let timer;
+  let isAtTop = true;
+  
+  ScrollTrigger.create({
+    start: "top top",
+    end: "max",
+    markers: true,
+    onUpdate: (self) => {
+      // Check if we're at the top of the page
+      if (self.scroll() <= 1) {
+        if (!isAtTop) {
+          // If we were not at the top and now we're back, reset the animation
+          isAtTop = true;
+          showAnim.progress(1).pause();
+          clearTimeout(timer);
+        }
+      } else {
+        isAtTop = false;
+        if (self.direction === -1) {
+          showAnim.play();
+          // Clear any existing timer when scrolling up
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            showAnim.pause();
+            gsap.set('.header-main', { yPercent: -100 });
+          }, 1000); // 3 seconds delay
+        } else {
+          showAnim.reverse();
+          // Clear the timer when scrolling down
+          clearTimeout(timer);
+        }
+      }
+    }
   });
   
