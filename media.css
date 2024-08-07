@@ -68,11 +68,7 @@ z-index: 100;
         max-width: calc(50% - 1rem);
          /* Adjust for spacing on medium screens */      
     }
-    .card{
-      width: 100px;
-      height: auto;
-      
-    }
+    
 }
 
 @media (max-width: 480px) {
