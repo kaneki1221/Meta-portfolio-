@@ -10,7 +10,62 @@ html, body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+
+
 }
+
+
+
+
+
+/* other imp */
+  
+div > h2 {
+  color: #ffffff;
+  border-bottom: 3px solid #00838d;
+  text-align: center;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 5px;
+
+}
+h2 {
+  color: #ffffff;
+  border-bottom: 3px solid #00838d;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 5px;
+}
+h1 {
+  color: #ffffff;
+  border-bottom: 3px solid #00838d;
+  margin-bottom: 10px;
+  /* padding: 10px; */
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 5px;
+ 
+} 
+h4{
+  color: #000000;
+
+}
+
+
+
+
+
+
+
+
+/* bg-skills-css */
+
+
 .container-skill {
   height: auto;
   display: flex;
@@ -30,31 +85,10 @@ html, body {
 }
 
 
-h2 {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  border-bottom: 3px solid #00838d;
-  
-  border-radius: 6px;
-  padding: 10px;
-  text-align: center;
-}
 
-h1 {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #00838d;
-  padding-bottom: 10px;
- 
-}
 
-div > h2 {
-  color: #ffffff;
-}
+
+
 
 .skill-item {
   display: flex;
@@ -123,15 +157,7 @@ div > h2 {
   color: #00838d;
 }
 
-.column + .column {
-  border-left: 2px solid #ddd;
-  padding-left: 20px;
-}
 
-.column {
-  border-right: 2px solid #ddd;
-  padding-right: 20px;
-}
 
 .go-corner {
   display: flex;
@@ -153,3 +179,6 @@ div > h2 {
   color: rgb(255, 255, 255);
   font-family: courier, sans;
 }
+
+
+/* end */

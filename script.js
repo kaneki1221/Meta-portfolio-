@@ -1,4 +1,7 @@
 
+
+
+
 document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -154,4 +157,27 @@ const showAnim = gsap.from('.header-main', {
       }
     }
   });
-  
+  // skill
+
+// Register the ScrollTrigger plugin with GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate each skill item as it enters the viewport
+gsap.utils.toArray('.skill-item').forEach(skill => {
+  gsap.from(skill, {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power1.out",
+    scrollTrigger: {
+      trigger: skill,
+      start: "top 80%", // Start the animation when the top of the skill enters 80% of the viewport
+      end: "bottom 60%", // End the animation when the bottom of the skill enters 60% of the viewport
+      toggleActions: "play none none none", // Only play the animation once
+      markers: false // Set to true to see markers for debugging
+    }
+  });
+});
+
+
+// end
