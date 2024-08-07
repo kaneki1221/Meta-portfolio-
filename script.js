@@ -95,23 +95,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // hamburger
 
-// scripts.js
-// scripts.js
-// scripts.js
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.getElementById("hamburger");
-    const mainNav = document.querySelector(".main-nav");
-  
-    hamburger.addEventListener("click", () => {
-      mainNav.classList.toggle("active");
-    });
+  const hamburger = document.getElementById("hamburger");
+  const mainNav = document.querySelector(".main-nav");
+
+  hamburger.addEventListener("click", () => {
+    // Toggle the active class on both menu and icon
+    mainNav.classList.toggle("active");
+    hamburger.classList.toggle("header-nav-active");
   });
-  
+});
 
 
-//   scroll
 
 
+
+
+// scroll
 
 
 const showAnim = gsap.from('.header-main', { 
@@ -126,7 +126,7 @@ const showAnim = gsap.from('.header-main', {
   ScrollTrigger.create({
     start: "top top",
     end: "max",
-    markers: true,
+    markers: false,
     onUpdate: (self) => {
       // Check if we're at the top of the page
       if (self.scroll() <= 1) {
