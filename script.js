@@ -1,3 +1,32 @@
+
+
+
+// header slide animation
+window.addEventListener('load', () => {
+  gsap.from(".header-main", { 
+    duration: 1, 
+    y: "-800%", 
+    opacity: 0, 
+    ease: "power3.out" 
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // smooth nav-links-forward
 
 document.querySelectorAll(".nav-links a").forEach((anchor) => {
@@ -28,11 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         // Add 'visible' class to make the section visible
-        entry.target.classList.add("visible");
+               entry.target.classList.add("visible");
 
         // Highlight the corresponding navigation item
         const id = entry.target.id;
-        navItems.forEach((item) => {
+           navItems.forEach((item) => {
           if (item.getAttribute("href").substring(1) === id) {
             item.classList.add("active");
           } else {
@@ -60,9 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // scroll-header
-
-// endd
-// togle
 
 // icon8
 var animations = [

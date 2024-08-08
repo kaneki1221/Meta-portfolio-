@@ -1,25 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 
 * {
   transition: all 0.3s ease-out;
 }
 
-html, body {
-
+html,
+body {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
   justify-content: center;
-
 }
 
-
-
-
-
 /* other imp */
-  
+
 div > h2 {
   color: #ffffff;
   border-bottom: 3px solid #00838d;
@@ -30,7 +25,6 @@ div > h2 {
   padding: 10px;
   font-weight: 700;
   border-radius: 5px;
-
 }
 h2 {
   color: #ffffff;
@@ -49,22 +43,12 @@ h1 {
   font-weight: 700;
   font-size: 20px;
   border-radius: 5px;
- 
-} 
-h4{
+}
+h4 {
   color: #000000;
-
 }
 
-
-
-
-
-
-
-
 /* bg-skills-css */
-
 
 .container-skill {
   height: auto;
@@ -83,12 +67,6 @@ h4{
   max-width: 300px;
   margin: 0 10px;
 }
-
-
-
-
-
-
 
 .skill-item {
   display: flex;
@@ -129,7 +107,7 @@ h4{
 .skill-item:hover {
   p {
     transition: all 0.3s ease-out;
-    color: ;
+    color:;
   }
   h3 {
     transition: all 0.3s ease-out;
@@ -157,8 +135,6 @@ h4{
   color: #00838d;
 }
 
-
-
 .go-corner {
   display: flex;
   align-items: center;
@@ -179,6 +155,5 @@ h4{
   color: rgb(255, 255, 255);
   font-family: courier, sans;
 }
-
 
 /* end */

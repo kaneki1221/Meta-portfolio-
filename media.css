@@ -25,7 +25,7 @@
       
   
   }
- .nav-list{
+              .nav-list{
     display: flex;
     flex-wrap: wrap;
   }
@@ -41,10 +41,11 @@
  align-items: center;
  margin: 0% auto;
  justify-content: center;
- background-color:  #ffffff;
- box-shadow: 1px 1px 5px #020202;
- border-bottom: 1px solid #1F2833;
- height:  auto ;
+background: transparent;
+ /* box-shadow: 1px 1px 5px #020202; */
+ /* border-bottom: 1px solid #1F2833; */
+ 
+ height: auto;
 z-index: 1000;
  position: fixed;
  width: 100%;
@@ -56,6 +57,11 @@ z-index: 1000;
  }
 
 }
+.header-main:hover{
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 13px;
+
+}
 
 
 .header-inner {
@@ -63,8 +69,8 @@ z-index: 1000;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 20px; /* Ensure padding for spacing */
-  box-sizing: border-box; /* Include padding in width calculations */
+ /* Ensure padding for spacing */
+ padding: 10px !important;
 }
 
 
@@ -379,52 +385,26 @@ background-color: #35A29E;
   }
 }
 
+
+
+
+/* hamburger *//* Hamburger */
 @media (max-width: 480px) {
+
   .section1{
     height: auto;
     padding-top: 10px;
 
 
   }
- .nav-item{
-    color: #ffffff !important;
-  }
-  .nav-list{
-  
-    color: #fff;
+  .name {
+    display: none;
+    margin-top: 1px;
+    color: #e2dada;
+    font-size: 1rem;
+   
+   }
 
-    margin-top: 10px;
-
-    
-  }
-  .nav-list li{
-    flex-direction: column;
-  }
-  
- .name {
-  display: none;
-  margin-top: 1px;
-  color: #e2dada;
-  font-size: 1rem;
- 
- }
- .header-main{
-  display: flex;
-  width: 100%;
- height: auto;
-  position: relative;
-  flex-wrap: wrap;
- /* background-color: #11806f; */
-  border-bottom: 1px 2px solid #fcf7f7;
-
-  /* box-shadow: 10px 10px -90px #11806f; */
- }
-
-}
-
-
-/* hamburger *//* Hamburger */
-@media (max-width: 480px) {
   .main-nav {
     display: none;
     height: auto;
@@ -451,6 +431,17 @@ background-color: #35A29E;
     width: 60px;
     z-index: 1000; /* Ensure it's above other content */
   }
+  .header-main{
+    display: flex;
+    width: 100%;
+   height: auto;
+    position: relative;
+    flex-wrap: wrap;
+   /* background-color: #11806f; */
+    border-bottom: 1px 2px solid #fcf7f7;
+  
+    /* box-shadow: 10px 10px -90px #11806f; */
+   }
 
   .header-inner {
     height: auto;
@@ -461,7 +452,18 @@ background-color: #35A29E;
 
   .nav-list {
     flex-direction: column;
+    color: #fff;
+
+    margin-top: 10px;
   }
+  .nav-list li{
+    flex-direction: column;
+  }
+   
+  .nav-item{
+    color: #ffffff !important;
+ }
+ 
 
   svg {
     width: 120px;
