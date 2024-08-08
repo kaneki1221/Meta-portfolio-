@@ -66,30 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // scroll-header
 
 // endd
-
-
-
-// icon lottie
-
-
-// var animation = lottie.loadAnimation({
-//   container: document.getElementById('icon-container'), // the DOM element that will contain the animation
-//   renderer: 'svg',
-//   loop: false,
-//   autoplay: false,
-//   path: 'icons8-github.json' // the path to the animation json
-// });
-
-// var iconContainer = document.getElementById('icon-container');
-
-// iconContainer.addEventListener('mouseover', function() {
-//   animation.goToAndPlay(0, true);
-// });
-
-// iconContainer.addEventListener('mouseout', function() {
-//   animation.stop();
-// });
-// new
+// togle
 
 
 
@@ -99,6 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// icon8
 var animations = [
   {
       container: 'icon-container-1',
