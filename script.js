@@ -9,10 +9,34 @@ window.addEventListener('load', () => {
     opacity: 0, 
     ease: "power3.out" 
   });
+  updateHeaderStyle();
 });
 
+// header slide animation
 
 
+// Function to update header style based on scroll position
+function updateHeaderStyle() {
+  const header = document.querySelector('.header-main');
+  const scrollPosition = window.scrollY;
+  const viewportHeight = window.innerHeight;
+
+  // Define the scroll position where styles change
+  const transparentThreshold = viewportHeight; // Height of the viewport for transparent header
+
+  if (scrollPosition < transparentThreshold) {
+    // Header in the top section
+    header.classList.add('transparent');
+    header.classList.remove('colored');
+  } else {
+    // Header in other sections
+    header.classList.remove('transparent');
+    header.classList.add('colored');
+  }
+}
+
+// Update header style on scroll
+window.addEventListener('scroll', updateHeaderStyle);
 
 
 

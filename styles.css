@@ -499,8 +499,6 @@ label[for="btn"]:after {
   }
 }
 
-
-
 /* end */
 
 /* intro section */
@@ -538,14 +536,10 @@ figure {
 }
 
 #svg-intro > img {
-
   align-items: center;
   width: 250px;
   height: auto;
-
-    
 }
-
 
 #social {
   display: flex;
@@ -632,4 +626,75 @@ canvas {
 
 .count-particles {
   border-radius: 0 0 3px 3px;
+}
+
+/* heade-main-main */
+
+/* header */
+
+.header-main {
+  display: flex;
+  top: 0;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  margin: 0% auto;
+  justify-content: center;
+  background: transparent;
+  transition:
+    box-shadow 0.3s ease,
+    padding 0.3s ease;
+
+  height: auto;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: ease 0.4s;
+  &--scrolled {
+    height: 40px;
+  }
+}
+.header-main:hover {
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  padding: 13px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* Ensure padding for spacing */
+  padding: 10px !important;
+}
+
+/* header-color change on section */
+/* Transparent Header */
+.header-main.transparent {
+  background-color: transparent; /* Transparent background */
+  color: white; /* Text color for transparent header */
+}
+
+/* Colored Header */
+.header-main.colored {
+  background-color: #e2d7d7; /* Color when scrolled */
+  color: white; /* Text color for colored header */
+}
+
+/* Box-shadow Effect on Hover */
+.header-main:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 13px; /* Padding on hover */
 }
