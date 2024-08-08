@@ -132,38 +132,3 @@ requestAnimationFrame(update);
 
 // end
 
-// lottie animationg icons
-
-// toggle
-let particlesInitialized = false;
-
-// Function to initialize Particle.js
-function initializeParticles() {
-    if (!particlesInitialized) {
-        particlesJS("particles-js", {
-            // Your Particle.js configuration
-        });
-        particlesInitialized = true;
-    }
-}
-
-// Function to stop Particle.js
-function stopParticles() {
-    if (window.pJSDom && window.pJSDom.length > 0) {
-        window.pJSDom[0].pJS.fn.vendors.destroy();
-        particlesInitialized = false;
-    }
-}
-
-// Function to handle toggle switch state
-function handleToggle() {
-    const toggleSwitch = document.getElementById('btn');
-    if (toggleSwitch.checked) {
-        initializeParticles();
-    } else {
-        stopParticles();
-    }
-}
-
-// Set up event listener for toggle switch
-document.getElementById('btn').addEventListener('change', handleToggle);

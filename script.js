@@ -28,45 +28,25 @@ window.addEventListener("load", () => {
       },
     }
   );
-  
 });
 
 // icons
 
-
 // Function to animate icons// GSAP Animation
-    gsap.fromTo("#social .icon",
-            { x: (i, target) => (i < 3 ? -window.innerWidth : window.innerWidth), opacity: 0 },
-            { 
-                x: 0, 
-                opacity: 1, 
-                stagger: 0.1, 
-                duration: 1.2,
-                ease: "bounce.out"
-            }
-        );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+gsap.fromTo(
+  "#social .icon",
+  {
+    x: (i, target) => (i < 3 ? -window.innerWidth : window.innerWidth),
+    opacity: 0,
+  },
+  {
+    x: 0,
+    opacity: 1,
+    stagger: 0.1,
+    duration: 1.2,
+    ease: "bounce.out",
+  }
+);
 
 // endAnimation
 
@@ -93,26 +73,9 @@ function updateHeaderStyle() {
 // Update header style on scroll
 window.addEventListener("scroll", updateHeaderStyle);
 
-
-
 // end
 
-
 // icons animation
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // smooth nav-links-forward
 
