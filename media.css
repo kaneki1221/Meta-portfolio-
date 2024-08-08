@@ -20,12 +20,12 @@
     .header-main{
       width: 100%;
     
-      background-color:  #ffffff;
+      background-color: #ffffff;
 
       
   
   }
-  .nav-list{
+ .nav-list{
     display: flex;
     flex-wrap: wrap;
   }
