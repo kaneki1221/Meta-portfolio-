@@ -138,15 +138,19 @@
 /* design */
 
 .container-about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background-color:  #49c5b6; */
   background-color: #1f1f1f;
+  height: 100vh;
 
 
 }
 .about-section{
   display: flex;
-  align-items: center;
-  /* background-color:  #49c5b6; */
+  justify-content: center;
+
   
 }
 .animated-text{
@@ -351,5 +355,5 @@ background-color: #35A29E;
   .toggle{
     display: none;
   }
-  
+
 }

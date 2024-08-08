@@ -1,56 +1,108 @@
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   const timeline = gsap.timeline();
 
   // Header slide-in animation
-  timeline.from(".header-main", { 
-    duration: 1, 
-    y: "-800%", 
-    opacity: 0, 
+  timeline.from(".header-main", {
+    duration: 1,
+    y: "-800%",
+    opacity: 0,
     ease: "power3.out",
-    onComplete: updateHeaderStyle // Update header style after the animation completes
+    onComplete: updateHeaderStyle, // Update header style after the animation completes
   });
 
   // Get the viewport height
   const viewportHeight = window.innerHeight;
 
   // Profile picture fall and bounce animation
-  timeline.fromTo(".pfp", 
-    { y: -viewportHeight / 2, scale: 0, opacity: 0 },  // Adjust starting position based on viewport height
-    { 
-      y: 0, 
-      scale: 1, 
-      opacity: 1, 
-      duration: 2,  // Total duration of the animation
-      ease: "bounce.out",  // Bounce effect
+  timeline.fromTo(
+    ".pfp",
+    { y: -viewportHeight / 2, scale: 0, opacity: 0 }, // Adjust starting position based on viewport height
+    {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      duration: 1, // Total duration of the animation
+      ease: "bounce.out", // Bounce effect
       onComplete: () => {
         // Optionally, you can fine-tune the final position if needed
-      }
+      },
     }
   );
-
-  // Function to update header style based on scroll position
-  function updateHeaderStyle() {
-    const header = document.querySelector('.header-main');
-    const scrollPosition = window.scrollY;
-    const viewportHeight = window.innerHeight;
-
-    // Define the scroll position where styles change
-    const transparentThreshold = viewportHeight; // Height of the viewport for transparent header
-
-    if (scrollPosition < transparentThreshold) {
-      // Header in the top section
-      header.classList.add('transparent');
-      header.classList.remove('colored');
-    } else {
-      // Header in other sections
-      header.classList.remove('transparent');
-      header.classList.add('colored');
-    }
-  }
-
-  // Update header style on scroll
-  window.addEventListener('scroll', updateHeaderStyle);
+  
 });
+
+// icons
+
+
+// Function to animate icons// GSAP Animation
+    gsap.fromTo("#social .icon",
+            { x: (i, target) => (i < 3 ? -window.innerWidth : window.innerWidth), opacity: 0 },
+            { 
+                x: 0, 
+                opacity: 1, 
+                stagger: 0.1, 
+                duration: 1.2,
+                ease: "bounce.out"
+            }
+        );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// endAnimation
+
+// Function to update header style based on scroll position
+function updateHeaderStyle() {
+  const header = document.querySelector(".header-main");
+  const scrollPosition = window.scrollY;
+  const viewportHeight = window.innerHeight;
+
+  // Define the scroll position where styles change
+  const transparentThreshold = viewportHeight; // Height of the viewport for transparent header
+
+  if (scrollPosition < transparentThreshold) {
+    // Header in the top section
+    header.classList.add("transparent");
+    header.classList.remove("colored");
+  } else {
+    // Header in other sections
+    header.classList.remove("transparent");
+    header.classList.add("colored");
+  }
+}
+
+// Update header style on scroll
+window.addEventListener("scroll", updateHeaderStyle);
+
+
+
+// end
+
+
+// icons animation
+
+
+
+
 
 
 
@@ -92,11 +144,11 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         // Add 'visible' class to make the section visible
-               entry.target.classList.add("visible");
+        entry.target.classList.add("visible");
 
         // Highlight the corresponding navigation item
         const id = entry.target.id;
-           navItems.forEach((item) => {
+        navItems.forEach((item) => {
           if (item.getAttribute("href").substring(1) === id) {
             item.classList.add("active");
           } else {

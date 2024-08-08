@@ -43,9 +43,26 @@
 
 /* icons */
 .icon-container {
- 
-  opacity: 0; 
+  opacity: 0;
+
   position: relative;
 }
 
 /* about section */
+.icon:hover {
+  transform: scale(2); /* Increase scale on hover */
+}
+
+/* hi */
+
+@media (max-width: 480px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #lottie-animation {
+    width:90%;
+  }
+}
