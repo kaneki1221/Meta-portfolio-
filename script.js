@@ -209,8 +209,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
   gsap.from(".animated-text", {
-    opacity: 0,
-    y: 50,
+    opacity: 1,
+    y: 90,
     duration: 2,
     ease: "power2.out",
     stagger: 0.1, // Stagger animation for each word or letter
@@ -299,4 +299,27 @@ gsap.utils.toArray(".skill-item").forEach((skill) => {
 
 // end
 
-//
+//project card animation
+console.clear();
+
+const items = gsap.utils.toArray(".project-card");
+
+items.forEach((item, index) => {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: item,
+      start: "top top+=" + item.getAttribute("animation-item"),
+      endTrigger: ".container2",
+      end: "top 260",
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
+      markers: false,
+    },
+  });
+  tl.to(item, {
+    opacity: 0.4,
+    scale: 0.85 + 0.02 * index,
+    transformOrigin: "center center",
+  });
+});

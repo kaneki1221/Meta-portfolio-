@@ -1,4 +1,4 @@
-/* Your provided CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");/* Your provided CSS */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
 
 :root {
   --sz: 2vmin;
@@ -21,6 +21,7 @@ html {
 }
 
 .toggle {
+  display:none !important;
   position: relative;
   width: calc(var(--sz) * 4);
   height: calc(var(--sz) * 2);
@@ -251,7 +252,7 @@ label[for="btn"]:after {
   }
 }
 
-/* toggle */
+
 
 /* CSS */
 .nav-item {
@@ -688,4 +689,64 @@ canvas {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   padding: 13px; /* Padding on hover */
+}
+
+/* project seciton */
+.container-project {
+  background-color: #ffffff;
+}
+
+.project-cards {
+  margin-left: 100px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 250px;
+  width: 800px;
+  margin-bottom: 50px;
+  background: rgb(39, 36, 36);
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  font-size: 36px;
+  border-radius: 9px;
+}
+
+.project-card:first-child {
+  box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.05);
+}
+
+.container2 {
+  padding-top: 40px;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid red;
+}
+
+.project-img{
+  width: 32%;
+  margin: 25px;
+}
+.project-desc{
+  color: #575f68;
+  font-size: 10px;
+  overflow: auto;
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    height: 250px;
+    width: 100px;
+    margin-bottom: 50px;
+    background: rgb(161, 32, 32);
+    font-size: 36px;
+    border: 2px solid red;
+    margin-left: 0%;
+  }
 }
