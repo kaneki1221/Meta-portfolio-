@@ -32,14 +32,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
     .skill-item {
         flex: 1 1 calc(50% - 1rem); /* Adjust for spacing on medium screens */
@@ -182,6 +174,7 @@ background-color: #35A29E;
   background-color: #1F2833;
 }
 .container-intro{
+  z-index: 4;
   /* background-color: #35A29E; */
 } 
 
@@ -355,105 +348,8 @@ background-color: #35A29E;
 
 /* hamburger *//* Hamburger */
 @media (max-width: 480px) {
-
-  .section1{
-    height: auto;
-    padding-top: 10px;
-
-
-  }
-  .name {
+  .toggle{
     display: none;
-    margin-top: 1px;
-    color: #e2dada;
-    font-size: 1rem;
-   
-   }
-
-  .main-nav {
-    display: none;
-    height: auto;
-    border-bottom: 2px #020202;
-    
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(-10px); /* Slide up effect */
   }
-
-  .main-nav.active {
-    display: flex; /* Show menu */
-    opacity: 1;
-    transform: translateY(); /* Slide down effect */
-    
-  }
-
-  #hamburger {
-    display: block;
-    position: absolute;
-    top: 15%;
-    right: 10px;
-    cursor: pointer;
-    width: 60px;
-    z-index: 1000; /* Ensure it's above other content */
-  }
-  .header-main{
-    display: flex;
-    width: 100%;
-   height: auto;
-    position: relative;
-    flex-wrap: wrap;
-   /* background-color: #11806f; */
-    border-bottom: 1px 2px solid #fcf7f7;
   
-    /* box-shadow: 10px 10px -90px #11806f; */
-   }
-
-  .header-inner {
-    height: auto;
-    background-color: #49c5b6;
-    border: none;
-    box-shadow: none;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    color: #fff;
-
-    margin-top: 10px;
-  }
-  .nav-list li{
-    flex-direction: column;
-  }
-   
-  .nav-item{
-    color: #ffffff !important;
- }
- 
-
-  svg {
-    width: 120px;
-    
-  }
-
-  #top-line,
-  #bottom-line,
-  #middle-line {
-    transform-box: fill-box;
-    transform-origin: center;
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
-  }
-
-  .header-nav-active #top-line {
-    transform: rotate(-45deg) translateY(10px);
-  }
-
-  .header-nav-active #bottom-line {
-    transform: rotate(45deg) translateY(-10px);
-  }
-
-  .header-nav-active #middle-line {
-    opacity: 0;
-  }
 }
-
-/* end */
