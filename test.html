@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Icon</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <style>
+        #icon-container {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="icon-container"></div>
+    
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('icon-container'), // the DOM element that will contain the animation
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '/icons8-facebook.json' // the path to the animation json
+        });
+
+        var iconContainer = document.getElementById('icon-container');
+
+        iconContainer.addEventListener('mouseover', function() {
+            animation.goToAndPlay(0, true);
+        });
+
+        iconContainer.addEventListener('mouseout', function() {
+            animation.stop();
+        });
+    </script>
+</body>
+</html>

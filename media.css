@@ -52,6 +52,7 @@ z-index: 1000;
  &--scrolled {
    height: 40px;
  }
+
 }
 
 
@@ -172,10 +173,21 @@ z-index: 1000;
 /* design */
 
 .bg-about{
-  background-color:  #49c5b6;
+  /* background-color:  #49c5b6; */
+  background-color: #1f1f1f;
 
 
 }
+.about-section{
+  display: flex;
+  align-items: center;
+  /* background-color:  #49c5b6; */
+  
+}
+.animated-text{
+  color: #e0e0e0;rgb(255, 255, 255) !important;
+}
+
 
 .bg-skills{
   background-color: #1f1f1f;

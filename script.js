@@ -1,7 +1,8 @@
+// icons
 
 
 
-
+// end
 document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -64,6 +65,103 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // scroll-header
 
+// endd
+
+
+
+// icon lottie
+
+
+// var animation = lottie.loadAnimation({
+//   container: document.getElementById('icon-container'), // the DOM element that will contain the animation
+//   renderer: 'svg',
+//   loop: false,
+//   autoplay: false,
+//   path: 'icons8-github.json' // the path to the animation json
+// });
+
+// var iconContainer = document.getElementById('icon-container');
+
+// iconContainer.addEventListener('mouseover', function() {
+//   animation.goToAndPlay(0, true);
+// });
+
+// iconContainer.addEventListener('mouseout', function() {
+//   animation.stop();
+// });
+// new
+
+
+
+
+
+
+
+
+
+var animations = [
+  {
+      container: 'icon-container-1',
+      path: 'icons8-github.json'
+  },
+  {
+      container: 'icon-container-2',
+      path: 'icons8-instagram.json' // Replace with your path
+  },
+  {
+      container: 'icon-container-3',
+      path: 'icons8-linked-in.json' // Replace with your path
+  },
+  {
+      container: 'icon-container-4',
+      path: 'icons8-twitter.json' // Replace with your path
+  },
+  {
+    container: 'icon-container-5',
+    path: 'icons8-gmail.json' // Replace with your path
+},
+{
+  container: 'icon-container-6',
+  path: 'icons8-facebook.json' // Replace with your path
+}
+];
+
+// Initialize animations and add event listeners
+animations.forEach(function(animationConfig) {
+  var animation = lottie.loadAnimation({
+      container: document.getElementById(animationConfig.container),
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: animationConfig.path
+  });
+
+  var iconContainer = document.getElementById(animationConfig.container);
+
+  iconContainer.addEventListener('mouseover', function() {
+      animation.goToAndPlay(0, true);
+  });
+
+  iconContainer.addEventListener('mouseout', function() {
+      animation.stop();
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// end
 
 
 
@@ -181,3 +279,6 @@ gsap.utils.toArray('.skill-item').forEach(skill => {
 
 
 // end
+
+
+// 

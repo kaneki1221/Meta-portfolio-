@@ -133,22 +133,3 @@ requestAnimationFrame(update);
 // end
 
 // lottie animationg icons
-const animationContainer = document.getElementById('animationContainer');
-        
-        lottie.loadAnimation({
-            container: animationContainer, // the dom element to contain the animation
-            renderer: 'svg', // render as SVG
-            loop: true, // loop the animation
-            autoplay: false, // do not autoplay
-            path: '/icons8-github.json' // the path to the animation file
-        });
-
-        // Play animation on hover
-        animationContainer.addEventListener('mouseenter', () => {
-            lottie.play();
-        });
-
-        // Pause animation when mouse leaves
-        animationContainer.addEventListener('mouseleave', () => {
-            lottie.pause();
-        });
