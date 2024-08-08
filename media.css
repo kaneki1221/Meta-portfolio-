@@ -35,9 +35,11 @@
 
 .header-main {
   display: flex;
+  top: 0;
   flex-wrap: wrap;
   text-align: center;
  align-items: center;
+ margin: 0% auto;
  justify-content: center;
  background-color:  #ffffff;
  box-shadow: 1px 1px 5px #020202;
@@ -172,7 +174,7 @@ z-index: 1000;
 
 /* design */
 
-.bg-about{
+.container-about{
   /* background-color:  #49c5b6; */
   background-color: #1f1f1f;
 
@@ -189,43 +191,31 @@ z-index: 1000;
 }
 
 
-.bg-skills{
+.container-skills{
+  background-color: #1d1a1a;
+}
+
+.container-projects{
   background-color: #1f1f1f;
 }
 
-.bg-projects{
-  background-color: #1f1f1f;
-}
-
-#bg-edu{
+#container-edu{
 background-color: #35A29E;
 }
 
 
-.bg-contact{
+.container-contact{
   background-color: #57dad3;
 }
-.bg-certificate{
+.container-certificate{
   background-color: #1F2833;
 }
-.bg-intro{
+.container-intro{
   /* background-color: #35A29E; */
 } 
 
-
-/* edu */
-
-#bg-edu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #e0e0e0;
-  padding: 50px 0; /* Added padding for top and bottom gap */
-}
-
 .wrapper {
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
   padding: 20px;
   box-sizing: border-box;

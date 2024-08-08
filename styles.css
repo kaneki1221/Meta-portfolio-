@@ -195,6 +195,7 @@ label[for=btn]:after {
           calc(var(--sz) / -8000) calc(var(--sz) / -150) calc(var(--sz) / 50) #0008, 
           calc(var(--sz) / 150) calc(var(--sz) / 100) calc(var(--sz) / 50) #fff;
   }
+  
 }
 
 @keyframes move-color {

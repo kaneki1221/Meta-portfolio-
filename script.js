@@ -1,188 +1,146 @@
-// icons
+// smooth nav-links-forward
 
+document.querySelectorAll(".nav-links a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
 
-// end
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        
-        window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: 'smooth'
-        });
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
     });
+  });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const navItems = document.querySelectorAll(".nav-item");
+  const options = {
+    threshold: 0.5, // Trigger when at least 50% of the section is in view
+  };
 
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.nav-item');
-    const options = {
-        threshold: 0.5 // Trigger when at least 50% of the section is in view
-    };
+  let currentActive = null;
 
-    let currentActive = null;
+  // Observer callback to handle section visibility
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add 'visible' class to make the section visible
+        entry.target.classList.add("visible");
 
-    // Observer callback to handle section visibility
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Add 'visible' class to make the section visible
-                entry.target.classList.add('visible');
-
-                // Highlight the corresponding navigation item
-                const id = entry.target.id;
-                navItems.forEach(item => {
-                    if (item.getAttribute('href').substring(1) === id) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-            }
+        // Highlight the corresponding navigation item
+        const id = entry.target.id;
+        navItems.forEach((item) => {
+          if (item.getAttribute("href").substring(1) === id) {
+            item.classList.add("active");
+          } else {
+            item.classList.remove("active");
+          }
         });
-    };
-
-    // Initialize observer
-    const observer = new IntersectionObserver(observerCallback, options);
-
-    // Observe each section
-    sections.forEach(section => observer.observe(section));
-
-    // Smooth scroll for navigation links
-    navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = item.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
+      }
     });
+  };
+
+  // Initialize observer
+  const observer = new IntersectionObserver(observerCallback, options);
+
+  // Observe each section
+  sections.forEach((section) => observer.observe(section));
+
+  // Smooth scroll for navigation links
+  navItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = item.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    });
+  });
 });
 // scroll-header
 
 // endd
 // togle
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // icon8
 var animations = [
   {
-      container: 'icon-container-1',
-      path: 'icons8-github.json'
+    container: "icon-container-1",
+    path: "icons8-github.json",
   },
   {
-      container: 'icon-container-2',
-      path: 'icons8-instagram.json' // Replace with your path
+    container: "icon-container-2",
+    path: "icons8-instagram.json", // Replace with your path
   },
   {
-      container: 'icon-container-3',
-      path: 'icons8-linked-in.json' // Replace with your path
+    container: "icon-container-3",
+    path: "icons8-linked-in.json", // Replace with your path
   },
   {
-      container: 'icon-container-4',
-      path: 'icons8-twitter.json' // Replace with your path
+    container: "icon-container-4",
+    path: "icons8-twitter.json", // Replace with your path
   },
   {
-    container: 'icon-container-5',
-    path: 'icons8-gmail.json' // Replace with your path
-},
-{
-  container: 'icon-container-6',
-  path: 'icons8-facebook.json' // Replace with your path
-}
+    container: "icon-container-5",
+    path: "icons8-gmail.json", // Replace with your path
+  },
+  {
+    container: "icon-container-6",
+    path: "icons8-facebook.json", // Replace with your path
+  },
 ];
 
 // Initialize animations and add event listeners
-animations.forEach(function(animationConfig) {
+animations.forEach(function (animationConfig) {
   var animation = lottie.loadAnimation({
-      container: document.getElementById(animationConfig.container),
-      renderer: 'svg',
-      loop: false,
-      autoplay: false,
-      path: animationConfig.path
+    container: document.getElementById(animationConfig.container),
+    renderer: "svg",
+    loop: false,
+    autoplay: false,
+    path: animationConfig.path,
   });
 
   var iconContainer = document.getElementById(animationConfig.container);
 
-  iconContainer.addEventListener('mouseover', function() {
-      animation.goToAndPlay(0, true);
+  iconContainer.addEventListener("mouseover", function () {
+    animation.goToAndPlay(0, true);
   });
 
-  iconContainer.addEventListener('mouseout', function() {
-      animation.stop();
+  iconContainer.addEventListener("mouseout", function () {
+    animation.stop();
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // end
 
-
-
 // script.js
 
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('lottie-animation');
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("lottie-animation");
 
-    // Load the Lottie animation
-    const animation = lottie.loadAnimation({
-        container: container, // The container where the animation will be rendered
-        renderer: 'svg',     // Use 'svg', 'canvas', or 'html' renderer
-        loop: true,          // Loop the animation
-        autoplay: true,      // Start playing the animation immediately
-        path: 'https://lottie.host/041c70e1-6871-4995-a422-4c1cde7a9559/xD2beFK0WV.json' // URL to the Lottie JSON file
-    });
+  // Load the Lottie animation
+  const animation = lottie.loadAnimation({
+    container: container, // The container where the animation will be rendered
+    renderer: "svg", // Use 'svg', 'canvas', or 'html' renderer
+    loop: true, // Loop the animation
+    autoplay: true, // Start playing the animation immediately
+    path: "https://lottie.host/041c70e1-6871-4995-a422-4c1cde7a9559/xD2beFK0WV.json", // URL to the Lottie JSON file
+  });
 });
-
 
 // script.js
-document.addEventListener('DOMContentLoaded', () => {
-    gsap.from(".animated-text", {
-        opacity: 0,
-        y: 50,
-        duration: 2,
-        ease: "power2.out",
-        stagger: 0.1, // Stagger animation for each word or letter
-        onComplete: () => console.log("Animation Complete!")
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.from(".animated-text", {
+    opacity: 0,
+    y: 50,
+    duration: 2,
+    ease: "power2.out",
+    stagger: 0.1, // Stagger animation for each word or letter
+    onComplete: () => console.log("Animation Complete!"),
+  });
 });
-
 
 // hamburger
 
@@ -197,61 +155,57 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-
-
-
 // scroll
 
-
-const showAnim = gsap.from('.header-main', { 
+const showAnim = gsap
+  .from(".header-main", {
     yPercent: -100,
     paused: true,
-    duration: 0.2
-  }).progress(1);
-  
-  let timer;
-  let isAtTop = true;
-  
-  ScrollTrigger.create({
-    start: "top top",
-    end: "max",
-    markers: false,
-    onUpdate: (self) => {
-      // Check if we're at the top of the page
-      if (self.scroll() <= 1) {
-        if (!isAtTop) {
-          // If we were not at the top and now we're back, reset the animation
-          isAtTop = true;
-          showAnim.progress(1).pause();
-          clearTimeout(timer);
-        }
+    duration: 0.2,
+  })
+  .progress(1);
+
+let timer;
+let isAtTop = true;
+
+ScrollTrigger.create({
+  start: "top top",
+  end: "max",
+  markers: false,
+  onUpdate: (self) => {
+    // Check if we're at the top of the page
+    if (self.scroll() <= 1) {
+      if (!isAtTop) {
+        // If we were not at the top and now we're back, reset the animation
+        isAtTop = true;
+        showAnim.progress(1).pause();
+        clearTimeout(timer);
+      }
+    } else {
+      isAtTop = false;
+      if (self.direction === -1) {
+        showAnim.play();
+        // Clear any existing timer when scrolling up
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          showAnim.pause();
+          gsap.set(".header-main", { yPercent: -100 });
+        }, 1000); // 3 seconds delay
       } else {
-        isAtTop = false;
-        if (self.direction === -1) {
-          showAnim.play();
-          // Clear any existing timer when scrolling up
-          clearTimeout(timer);
-          timer = setTimeout(() => {
-            showAnim.pause();
-            gsap.set('.header-main', { yPercent: -100 });
-          }, 1000); // 3 seconds delay
-        } else {
-          showAnim.reverse();
-          // Clear the timer when scrolling down
-          clearTimeout(timer);
-        }
+        showAnim.reverse();
+        // Clear the timer when scrolling down
+        clearTimeout(timer);
       }
     }
-  });
-  // skill
+  },
+});
+// skill
 
 // Register the ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 // Animate each skill item as it enters the viewport
-gsap.utils.toArray('.skill-item').forEach(skill => {
+gsap.utils.toArray(".skill-item").forEach((skill) => {
   gsap.from(skill, {
     y: 50,
     opacity: 0,
@@ -262,13 +216,11 @@ gsap.utils.toArray('.skill-item').forEach(skill => {
       start: "top 80%", // Start the animation when the top of the skill enters 80% of the viewport
       end: "bottom 60%", // End the animation when the bottom of the skill enters 60% of the viewport
       toggleActions: "play none none none", // Only play the animation once
-      markers: false // Set to true to see markers for debugging
-    }
+      markers: false, // Set to true to see markers for debugging
+    },
   });
 });
 
-
 // end
 
-
-// 
+//
