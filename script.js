@@ -1,45 +1,56 @@
-
-
-
-// header slide animation
 window.addEventListener('load', () => {
-  gsap.from(".header-main", { 
+  const timeline = gsap.timeline();
+
+  // Header slide-in animation
+  timeline.from(".header-main", { 
     duration: 1, 
     y: "-800%", 
     opacity: 0, 
-    ease: "power3.out" 
+    ease: "power3.out",
+    onComplete: updateHeaderStyle // Update header style after the animation completes
   });
-  updateHeaderStyle();
-});
 
-// header slide animation
-
-
-// Function to update header style based on scroll position
-function updateHeaderStyle() {
-  const header = document.querySelector('.header-main');
-  const scrollPosition = window.scrollY;
+  // Get the viewport height
   const viewportHeight = window.innerHeight;
 
-  // Define the scroll position where styles change
-  const transparentThreshold = viewportHeight; // Height of the viewport for transparent header
+  // Profile picture fall and bounce animation
+  timeline.fromTo(".pfp", 
+    { y: -viewportHeight / 2, scale: 0, opacity: 0 },  // Adjust starting position based on viewport height
+    { 
+      y: 0, 
+      scale: 1, 
+      opacity: 1, 
+      duration: 2,  // Total duration of the animation
+      ease: "bounce.out",  // Bounce effect
+      onComplete: () => {
+        // Optionally, you can fine-tune the final position if needed
+      }
+    }
+  );
 
-  if (scrollPosition < transparentThreshold) {
-    // Header in the top section
-    header.classList.add('transparent');
-    header.classList.remove('colored');
-  } else {
-    // Header in other sections
-    header.classList.remove('transparent');
-    header.classList.add('colored');
+  // Function to update header style based on scroll position
+  function updateHeaderStyle() {
+    const header = document.querySelector('.header-main');
+    const scrollPosition = window.scrollY;
+    const viewportHeight = window.innerHeight;
+
+    // Define the scroll position where styles change
+    const transparentThreshold = viewportHeight; // Height of the viewport for transparent header
+
+    if (scrollPosition < transparentThreshold) {
+      // Header in the top section
+      header.classList.add('transparent');
+      header.classList.remove('colored');
+    } else {
+      // Header in other sections
+      header.classList.remove('transparent');
+      header.classList.add('colored');
+    }
   }
-}
 
-// Update header style on scroll
-window.addEventListener('scroll', updateHeaderStyle);
-
-
-
+  // Update header style on scroll
+  window.addEventListener('scroll', updateHeaderStyle);
+});
 
 
 
