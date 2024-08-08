@@ -570,7 +570,7 @@ figure {
 /* ---- reset ---- */
 
 canvas {
-  display: block;
+  /* display: block; */
   vertical-align: bottom;
 }
 

@@ -41,4 +41,11 @@
   transform: scale(0); /* Initially scaled down */
 }
 
+/* icons */
+.icon-container {
+ 
+  opacity: 0; 
+  position: relative;
+}
+
 /* about section */
