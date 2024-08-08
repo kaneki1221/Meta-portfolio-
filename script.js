@@ -1,6 +1,3 @@
-import { injectSpeedInsights } from "@vercel/speed-insights";
-
-injectSpeedInsights();
 window.addEventListener("load", () => {
   const timeline = gsap.timeline();
 
