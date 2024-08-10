@@ -162,20 +162,20 @@
 
 
 .container-skills{
-  background-color: #1d1a1a;
-}
-
-.container-projects{
-  background-color: #1f1f1f;
-}
-
-#container-edu{
-background-color: #35A29E;
+  /* background-color: #1d1a1a; */
+  background: linear-gradient(109.61deg, #4C4F5A 4.26%, #202125 84.84%);
 }
 
 
+
+.container-tech{
+  background-color: #1b1919;
+  height: 100vh;
+
+
+}
 .container-contact{
-  background-color: #57dad3;
+  background: linear-gradient(#dd8585, #8e51f0);
 }
 .container-certificate{
   background-color: #1F2833;
@@ -185,11 +185,20 @@ background-color: #35A29E;
   /* background-color: #35A29E; */
 } 
 
+/*          
+background-color: #35A29E;
+ background-color: #1d1a1a;
+ background: #1f1f1f;
+
+*/
+
 .wrapper {
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
   padding: 20px;
+  /* background-color: #1F2833; */
   box-sizing: border-box;
+  margin-bottom: 2ex;
 }
 
 .timeline {

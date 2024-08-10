@@ -1,0 +1,12 @@
+.container-tech {
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(7, 185, 185);
+  width: 120px;
+  height: 100vh;
+}

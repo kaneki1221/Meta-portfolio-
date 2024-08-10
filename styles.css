@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");/* Your provided CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"); /* Your provided CSS */
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 :root {
   --sz: 2vmin;
   --on: #c2dde0;
@@ -21,7 +19,7 @@ html {
 }
 
 .toggle {
-  display:none !important;
+  display: none !important;
   position: relative;
   width: calc(var(--sz) * 4);
   height: calc(var(--sz) * 2);
@@ -251,8 +249,6 @@ label[for="btn"]:after {
     width: calc(100% - calc(calc(var(--sz) / 5) * 4));
   }
 }
-
-
 
 /* CSS */
 .nav-item {
@@ -691,62 +687,85 @@ canvas {
   padding: 13px; /* Padding on hover */
 }
 
-/* project seciton */
-.container-project {
-  background-color: #ffffff;
-}
 
-.project-cards {
-  margin-left: 100px;
-}
 
-.project-card {
+/* tech stack */
+
+
+
+/* //tech-stack */
+.tech-stack {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
-  height: 250px;
-  width: 800px;
-  margin-bottom: 50px;
-  background: rgb(39, 36, 36);
-  box-shadow:
-    rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  font-size: 36px;
-  border-radius: 9px;
+  flex-wrap: wrap;
+  gap: 20px;
+
+ 
+ 
 }
 
-.project-card:first-child {
-  box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.05);
+.skill-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--g, 1.5rem); /* Adjust gap between items */
+  justify-content: center; /* Center items horizontally */
 }
 
-.container2 {
-  padding-top: 40px;
-  width: 100%;
+.tech-card {
+  background: #1D1E22;
+ width: auto;
   height: auto;
-  border-top: 1px solid red;
+  border-radius: 0.5rem;
+  
+
+ 
+  
+ 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.project-img{
-  width: 32%;
-  margin: 25px;
-}
-.project-desc{
-  color: #575f68;
-  font-size: 10px;
-  overflow: auto;
+header svg {
+  margin: 10px;
 }
 
-@media (max-width: 480px) {
-  .project-card {
-    height: 250px;
-    width: 100px;
-    margin-bottom: 50px;
-    background: rgb(161, 32, 32);
-    font-size: 36px;
-    border: 2px solid red;
-    margin-left: 0%;
-  }
+header>h1{
+  text-align:center;
+  margin-bottom:100px;
+   font-family: Lato, sans-serif;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 1.57px;
+      color: #C5C8D4;
+      margin: 0;
+}
+
+.tech-main{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  /* background-color: #0056b3; */
+}
+
+.tech-content{
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  text-align: center;
+}
+
+
+ .text{
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1.57px;
+  color: #C5C8D4;
+  margin: 0;
 }
