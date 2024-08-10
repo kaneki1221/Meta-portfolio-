@@ -411,9 +411,9 @@ gsap.fromTo(
 document.querySelectorAll(".social-icons a").forEach((icon) => {
   icon.addEventListener("mouseenter", () => {
     gsap.to(icon, {
-      scale: 1.3,
+      scale: 1.8,
       color: "#007bff",
-      duration: 0.3,
+      duration: 0.2,
       ease: "power2.out",
     });
   });
@@ -421,7 +421,7 @@ document.querySelectorAll(".social-icons a").forEach((icon) => {
     gsap.to(icon, {
       scale: 1,
       color: "#495057",
-      duration: 0.3,
+      duration: 0.2,
       ease: "power2.out",
     });
   });
