@@ -4,11 +4,76 @@ window.addEventListener("load", () => {
   // Header slide-in animation
   timeline.from(".header-main", {
     duration: 1,
-    y: "-800%",
+    y: "-100%",
     opacity: 0,
-    ease: "power3.out",
-    onComplete: updateHeaderStyle, // Update header style after the animation completes
+    ease: "power4.out",
+
+    onComplete: updateHeaderStyle,
   });
+
+  // Animate the .mymyname with effects
+  const colors = [
+    "#ff5733",
+    "#33ff57",
+    "#3357ff",
+    "#ff33a1",
+    "#33fff0",
+    "#ffb833",
+    "#a1ff33",
+  ];
+
+  timeline.from(
+    ".myname",
+    {
+      duration: 1.5,
+      opacity: 1,
+      x: -50,
+      scale: 1,
+      ease: "power2.out",
+      onComplete: () => {
+        // Continuous gradient color animation with smoother transitions
+        gsap.to(".myname strong", {
+          color: () => `hsl(${Math.random() * 360}, 70%, 50%)`, // Dynamic color
+          duration: 2, // Extended duration for smoother transitions
+          repeat: -1,
+          yoyo: true,
+          ease: "power1.inOut",
+          onUpdate: function () {
+            // Add a subtle text-shadow effect to enhance readability
+            gsap.set(".myname strong", {
+              textShadow: `0 0 5px ${gsap.getProperty(".myname strong", "color")}`,
+            });
+          },
+          onComplete: () => {
+            // Set the final color to a dark shade for visibility against white
+            gsap.to(".myname strong", {
+              color: "#000", // Dark color for visibility
+              duration: 0.5,
+              scale: 1.2,
+              ease: "power1.inOut",
+            });
+          },
+        });
+      },
+    },
+    "-=0.5"
+  );
+
+  // Animate the navigation items with more engaging effects
+  timeline.from(
+    ".nav-item",
+    {
+      duration: 1.2,
+      opacity: 0,
+      y: 40,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+      },
+      ease: "power2.out",
+    },
+    "-=0.5"
+  );
 
   // Get the viewport height
   const viewportHeight = window.innerHeight;
@@ -16,37 +81,46 @@ window.addEventListener("load", () => {
   // Profile picture fall and bounce animation
   timeline.fromTo(
     ".pfp",
-    { y: -viewportHeight / 2, scale: 0, opacity: 0 }, // Adjust starting position based on viewport height
+    { y: -viewportHeight / 2, scale: 0, opacity: 0 },
     {
       y: 0,
       scale: 1,
       opacity: 1,
-      duration: 1.5, // Total duration of the animation
-      ease: "bounce.out", // Bounce effect
-      onComplete: () => {
-        // Optionally, you can fine-tune the final position if needed
+      duration: 1.2,
+      ease: "bounce.out",
+    },
+    "-=1"
+  );
+
+  // Icons animation - starts after profile picture animation
+  timeline.fromTo(
+    "#social .icon",
+    {
+      x: (i) => (i % 2 === 0 ? -150 : 150),
+      opacity: 0,
+      scale: 0.5,
+      rotationY: 45,
+      skewX: 10,
+      filter: "blur(10px)",
+    },
+    {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      rotationY: 0,
+      skewX: 0,
+      filter: "blur(0px)",
+      stagger: {
+        amount: 1,
+        from: "edges",
+        ease: "back.out(1.1)",
       },
-    }
+      duration: 1.2,
+      ease: "elastic.out(1, 0.75)",
+    },
+    "-=0.5"
   );
 });
-
-// icons
-
-// Function to animate icons// GSAP Animation
-gsap.fromTo(
-  "#social .icon",
-  {
-    x: (i, target) => (i < 3 ? -window.innerWidth : window.innerWidth),
-    opacity: 0,
-  },
-  {
-    x: 0,
-    opacity: 1,
-    stagger: 0.1,
-    duration: 1.2,
-    ease: "bounce.out",
-  }
-);
 
 // endAnimation
 
@@ -209,17 +283,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // script.js
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.from(".animated-text", {
-    opacity: 1,
-    y: 90,
-    duration: 2,
-    ease: "power2.out",
-    stagger: 0.1, // Stagger animation for each word or letter
-    onComplete: () => console.log("Animation Complete!"),
-  });
-});
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
+// Set up ScrollTrigger for animation
+gsap.from(".animated-text", {
+  opacity: 1,
+  y: 90,
+  duration: 2,
+  ease: "power2.out",
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: ".animated-text", // The element that triggers the animation
+    start: "top 70%", // When the top of the element is 80% from the top of the viewport
+    end: "bottom 20%", // Animation will end when the bottom of the element is 20% from the top of the viewport
+    scrub: true, // Optional: Smooth animation linked to scrolling position
+    onEnter: () => console.log("Animation Started!"), // Optional: Log when animation starts
+    onLeave: () => console.log("Animation Ended!"), // Optional: Log when animation ends
+  },
+});
 // hamburger
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -268,7 +350,7 @@ ScrollTrigger.create({
         timer = setTimeout(() => {
           showAnim.pause();
           gsap.set(".header-main", { yPercent: -100 });
-        }, 1000); // 3 seconds delay
+        }, 1700); // 3 seconds delay
       } else {
         showAnim.reverse();
         // Clear the timer when scrolling down
@@ -278,50 +360,3 @@ ScrollTrigger.create({
   },
 });
 // skill
-
-// Register the ScrollTrigger plugin with GSAP
-gsap.registerPlugin(ScrollTrigger);
-
-// Animate each skill item as it enters the viewport
-gsap.utils.toArray(".skill-item").forEach((skill) => {
-  gsap.from(skill, {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    ease: "power1.out",
-    scrollTrigger: {
-      trigger: skill,
-      start: "top 80%", // Start the animation when the top of the skill enters 80% of the viewport
-      end: "bottom 60%", // End the animation when the bottom of the skill enters 60% of the viewport
-      toggleActions: "play none none none", // Only play the animation once
-      markers: false, // Set to true to see markers for debugging
-    },
-  });
-});
-
-// end
-
-//project card animation
-console.clear();
-
-const items = gsap.utils.toArray(".project-card");
-
-items.forEach((item, index) => {
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: item,
-      start: "top top+=" + item.getAttribute("animation-item"),
-      endTrigger: ".container2",
-      end: "top 260",
-      pin: true,
-      pinSpacing: false,
-      scrub: true,
-      markers: false,
-    },
-  });
-  tl.to(item, {
-    opacity: 0.4,
-    scale: 0.85 + 0.02 * index,
-    transformOrigin: "center center",
-  });
-});

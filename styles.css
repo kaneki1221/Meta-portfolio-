@@ -280,14 +280,16 @@ label[for="btn"]:after {
   transform: translateX(-50%);
 }
 
-.name {
+.myname {
   font-family: "Courier New", Courier, monospace;
-  font-size: 22px;
+  font-size: 20px;
   color: #12180e; /* Example color, you can choose any color */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0;
   padding: 0;
-  white-space: nowrap;
+  margin-left: 7rem;
+
+  opacity: 0;
 }
 
 .wrapper {
@@ -309,7 +311,6 @@ label[for="btn"]:after {
 }
 
 .nav-item {
-  margin: 0 15px;
   font-size: 1rem;
   color: #fff; /* Default text color */
   text-decoration: none;
@@ -662,9 +663,8 @@ canvas {
   align-items: center;
   width: 100%;
   /* Ensure padding for spacing */
-  padding: 10px !important;
+  /* padding: 10px !important; */
 }
-
 
 /* tech stack */
 
