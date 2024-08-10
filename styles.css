@@ -713,7 +713,7 @@ canvas {
 
 .tech-card {
   background: #1D1E22;
- width: auto;
+ width: 50vh;
   height: auto;
   border-radius: 0.5rem;
   
@@ -747,6 +747,7 @@ header>h1{
 
 .tech-main{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   text-align: center;
@@ -756,7 +757,7 @@ header>h1{
 .tech-content{
   justify-content: center;
   align-items: center;
-  margin: 15px;
+  margin: 20px;
   text-align: center;
 }
 

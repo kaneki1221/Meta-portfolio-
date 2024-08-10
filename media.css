@@ -170,7 +170,7 @@
 
 .container-tech{
   background-color: #1b1919;
-  height: 100vh;
+  height: 200vh;
 
 
 }
@@ -199,6 +199,7 @@ background-color: #35A29E;
   /* background-color: #1F2833; */
   box-sizing: border-box;
   margin-bottom: 2ex;
+  height: auto;
 }
 
 .timeline {
