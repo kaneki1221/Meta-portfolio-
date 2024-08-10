@@ -37,15 +37,17 @@ h2 {
   font-size: 20px;
   border-radius: 5px;
 }
-h1 {
+/* h1 {
   color: #ffffff;
   border-bottom: 3px solid #00838d;
   margin-bottom: 10px;
-  /* padding: 10px; */
+  
   font-weight: 700;
   font-size: 20px;
   border-radius: 5px;
-}
+} */
+
+
 h4 {
   color: #000000;
 }

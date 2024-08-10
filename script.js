@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
       y: 0,
       scale: 1,
       opacity: 1,
-      duration: 1, // Total duration of the animation
+      duration: 1.5, // Total duration of the animation
       ease: "bounce.out", // Bounce effect
       onComplete: () => {
         // Optionally, you can fine-tune the final position if needed
@@ -173,8 +173,8 @@ animations.forEach(function (animationConfig) {
   var animation = lottie.loadAnimation({
     container: document.getElementById(animationConfig.container),
     renderer: "svg",
-    loop: false,
-    autoplay: false,
+    loop: true,
+    autoplay: true,
     path: animationConfig.path,
   });
 
@@ -182,10 +182,12 @@ animations.forEach(function (animationConfig) {
 
   iconContainer.addEventListener("mouseover", function () {
     animation.goToAndPlay(0, true);
+    iconContainer.style.transform = "scale(1.3)"; // Scale up on hover
   });
 
   iconContainer.addEventListener("mouseout", function () {
-    animation.stop();
+    // animation.stop();
+    iconContainer.style.transform = "scale(1)"; // Reset scale on mouse out
   });
 });
 

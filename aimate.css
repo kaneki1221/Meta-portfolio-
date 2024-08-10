@@ -19,8 +19,8 @@
 
 /* Colored Header */
 .header-main.colored {
-  background-color: #e2d7d7; /* Color when scrolled */
-  color: white; /* Text color for colored header */
+  background-color: #f5f2f2;/* Color when scrolled */
+  color: rgb(255, 255, 255); /* Text color for colored header */
 }
 
 /* Box-shadow Effect on Hover */

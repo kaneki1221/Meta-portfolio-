@@ -665,43 +665,26 @@ canvas {
   padding: 10px !important;
 }
 
-/* header-color change on section */
-/* Transparent Header */
-.header-main.transparent {
-  background-color: transparent; /* Transparent background */
-  color: white; /* Text color for transparent header */
-}
-
-/* Colored Header */
-.header-main.colored {
-  background-color: #e2d7d7; /* Color when scrolled */
-  color: white; /* Text color for colored header */
-}
-
-/* Box-shadow Effect on Hover */
-.header-main:hover {
-  box-shadow:
-    rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  padding: 13px; /* Padding on hover */
-}
-
-
 
 /* tech stack */
 
-
-
 /* //tech-stack */
+
+.container-tech {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .tech-stack {
   display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 2rem;
+
+  align-items: center;
 
   flex-wrap: wrap;
-  gap: 20px;
-
- 
- 
 }
 
 .skill-stack {
@@ -712,40 +695,37 @@ canvas {
 }
 
 .tech-card {
-  background: #1D1E22;
- width: 50vh;
+  background: #1d1e22;
+  width: 43vh;
   height: auto;
   border-radius: 0.5rem;
-  
 
- 
-  
- 
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-header {
+header-tech {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header svg {
+header-tech svg {
   margin: 10px;
 }
 
-header>h1{
-  text-align:center;
-  margin-bottom:100px;
-   font-family: Lato, sans-serif;
-      font-weight: 900;
-      font-size: 14px;
-      letter-spacing: 1.57px;
-      color: #C5C8D4;
-      margin: 0;
+header-tech h1 {
+  text-align: center;
+  margin-bottom: 100px;
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1.57px;
+  color: #c5c8d4;
+  margin: 0;
 }
 
-.tech-main{
+.tech-main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -754,19 +734,18 @@ header>h1{
   /* background-color: #0056b3; */
 }
 
-.tech-content{
+.tech-content {
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 15px;
   text-align: center;
 }
 
-
- .text{
+.text {
   font-family: Lato, sans-serif;
   font-weight: 900;
   font-size: 14px;
   letter-spacing: 1.57px;
-  color: #C5C8D4;
+  color: #c5c8d4;
   margin: 0;
 }

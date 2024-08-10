@@ -170,7 +170,9 @@
 
 .container-tech{
   background-color: #1b1919;
-  height: 200vh;
+ padding-top: 60px;
+ padding-bottom: 60px;
+ 
 
 
 }
@@ -198,8 +200,8 @@ background-color: #35A29E;
   padding: 20px;
   /* background-color: #1F2833; */
   box-sizing: border-box;
-  margin-bottom: 2ex;
-  height: auto;
+ 
+
 }
 
 .timeline {
