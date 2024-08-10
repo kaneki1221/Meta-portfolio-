@@ -359,4 +359,70 @@ ScrollTrigger.create({
     }
   },
 });
-// skill
+// skill  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(
+  ".tech-card",
+  { opacity: 0, y: 50 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".tech-card",
+      start: "top 70%",
+      end: "bottom 20%",
+      scrub: true,
+      markers: false, // Set to true for debugging
+    },
+  }
+);
+
+gsap.fromTo(
+  ".tech-content",
+  { opacity: 0, y: 50 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".tech-content",
+      start: "top 80%",
+      end: "bottom 40%",
+      scrub: true,
+      markers: false, // Set to true for debugging
+    },
+  }
+);
+// hover
+
+// contact form
+// Animate the form on page load
+gsap.fromTo(
+  ".contact-form",
+  { y: 50, opacity: 0 },
+  { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+);
+
+// Animate the social icons on hover
+document.querySelectorAll(".social-icons a").forEach((icon) => {
+  icon.addEventListener("mouseenter", () => {
+    gsap.to(icon, {
+      scale: 1.3,
+      color: "#007bff",
+      duration: 0.3,
+      ease: "power2.out",
+    });
+  });
+  icon.addEventListener("mouseleave", () => {
+    gsap.to(icon, {
+      scale: 1,
+      color: "#495057",
+      duration: 0.3,
+      ease: "power2.out",
+    });
+  });
+});
