@@ -426,3 +426,72 @@ document.querySelectorAll(".social-icons a").forEach((icon) => {
     });
   });
 });
+// certificate 
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate the card
+gsap.fromTo(".card", 
+  {
+    opacity: 0, 
+    y: 50, 
+    scale: 0.9
+  }, 
+  {
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".certificates",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play reverse play reverse",
+      markers: false
+    }
+  }
+);
+
+// Animate the images inside the cards
+gsap.fromTo(".card img", 
+  {
+    opacity: 0, 
+    x: -50, 
+    scale: 0.8
+  }, 
+  {
+    opacity: 1, 
+    x: 0, 
+    scale: 1,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".certificates",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play reverse play reverse",
+      markers: false
+    }
+  }
+);
+
+// Animate the text inside the cards
+gsap.fromTo(".card-content", 
+  {
+    opacity: 0, 
+    y: 50
+  }, 
+  {
+    opacity: 1, 
+    y: 0,
+    duration: 1,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".certificates",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play reverse play reverse",
+      markers: false
+    }
+  }
+);

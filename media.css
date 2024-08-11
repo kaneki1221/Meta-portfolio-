@@ -29,7 +29,16 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .container-certificate {
+    width: 100%;
+    height: auto !important;
+  }
+  .card{
+    width: 80%;
+  }
 }
+
+
 
 
 @media (max-width: 768px) {
@@ -38,7 +47,17 @@
         max-width: calc(50% - 1rem);
          /* Adjust for spacing on medium screens */      
     }
+    .container-tech{
+      height: auto !important;
+    }
+    .about-section{
+      flex-wrap: wrap;
+    }
     
+    #lottie-animation{
+      /* padding-top: 2vh; */
+      width: 30vh;
+    }
 }
 
 @media (max-width: 480px) {
@@ -58,17 +77,31 @@
     width: 200px;
     height: auto;
   }
+.container-intro{
+  width: 100%;
+  height: auto;
+}
+.icons-container{
+  width: 100%;
+  display: flex;
 
+ 
+}
+/* todo */
 
   .about-section {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
+   
   }
   #lottie-animation {
-    width: 300px;
-    height: 400px;
+    padding-top: 40px;
+    width: 100%;
+    
   }
  .skill-item {
         flex: 1 1 calc(100% - 1rem); /* Full width minus spacing on small screens */
@@ -119,18 +152,24 @@
   align-items: center;
   /* background-color:  #49c5b6; */
   background-color: #1f1f1f;
-  height: 100vh;
+  height: 120vh;
 
 
 }
 .about-section{
   display: flex;
+  text-align: center;
   justify-content: center;
+ align-items: center;
 
   
 }
+.about{
+  height: auto;
+}
 .animated-text{
   color: #e0e0e0;rgb(255, 255, 255) !important;
+  height: auto;
 }
 
 
@@ -138,14 +177,19 @@
   /* background-color: #1d1a1a; */
   background: linear-gradient(109.61deg, #4C4F5A 4.26%, #202125 84.84%);
 }
+.container-education{
+  background-color: #1f1f1f;
+}
 
 
 
 .container-tech{
   background-color: #1b1919;
- padding-top: 60px;
- padding-bottom: 60px;
- height: auto;
+  padding-top: 12vh;
+ padding-bottom: 12vh;
+ height: 140vh;
+ 
+
 
 
 }
@@ -153,7 +197,9 @@
   background: linear-gradient(#dd8585, #8e51f0);
 }
 .container-certificate{
+  padding-top: 12vh;
   background-color: #1F2833;
+  height: 130vh;
 }
 .container-intro{
   z-index: 4;
@@ -254,7 +300,7 @@ background-color: #35A29E;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #1f1f1f;
+
   min-height: 100vh;
   padding: 100px 0;
   font-family: Jost;
