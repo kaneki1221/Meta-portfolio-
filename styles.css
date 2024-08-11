@@ -1,14 +1,63 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"); /* Your provided CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+@import url("//unpkg.com/element-ui@2.15.14/lib/theme-chalk/index.css");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   transition: var(--tr);
+  transition: all 0.3s ease-out;
+}
+html,
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
+/* other imp */
+
+div > h2 {
+  color: #ffffff;
+  border-bottom: 3px solid #00838d;
+  text-align: center;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+h2 {
+  color: #ffffff;
+  border-bottom: 3px solid #00838d;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 5px;
+}
+/* h1 {
+  color: #ffffff;
+  border-bottom: 3px solid #00838d;
+  margin-bottom: 10px;
+  
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 5px;
+} */
+
+h4 {
+  color: #000000;
 }
 
 :root {
@@ -17,6 +66,64 @@ html {
   --of: #68838d;
   --tr: all 0.25s ease 0s;
 }
+
+.header-main:hover {
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  padding: 13px;
+}
+
+/* header-color change on section */
+/* Transparent Header */
+.header-main.transparent {
+  background-color: transparent; /* Transparent background */
+  color: white; /* Text color for transparent header */
+}
+
+/* Colored Header */
+.header-main.colored {
+  background-color: #f5f2f2;
+  color: rgb(245, 234, 234); /* Text color for colored header */
+}
+
+/* Box-shadow Effect on Hover */
+.header-main:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 13px; /* Padding on hover */
+}
+
+/* intro animation  */
+.pfp {
+  align-items: center;
+  width: 12rem;
+  height: auto;
+  opacity: 0; /* Initially hidden */
+  transform: scale(0); /* Initially scaled down */
+}
+
+/* icons */
+.icon-container {
+  opacity: 0;
+
+  position: relative;
+}
+
+/* about section */
+.icon:hover {
+  transform: scale(2); /* Increase scale on hover */
+}
+
+
+
 
 .toggle {
   display: none !important;
@@ -398,7 +505,6 @@ label[for="btn"]:after {
   padding-bottom: 50vh;
 }
 
-
 /* end */
 
 /* intro section */
@@ -443,22 +549,6 @@ figure {
   align-items: center;
 }
 
-/* Media query for mobile screens */
-@media (max-width: 480px) {
-  #short-intro {
-    width: 50%;
-    background-color: #756868 !important;
-  }
-  #social {
-    display: flex;
-    gap: 20px;
-    width: 300px;
-  }
-  .icon {
-    width: 200px;
-    height: auto;
-  }
-}
 
 /* particlejs */
 
@@ -602,7 +692,9 @@ canvas {
   height: auto;
   border-radius: 0.5rem;
   transform: scale(1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 
   box-shadow:
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -643,8 +735,10 @@ header h1 {
   align-items: center;
   margin: 15px;
   text-align: center;
-   transform: translateY(0);
-   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transform: translateY(0);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .text {
@@ -656,14 +750,79 @@ header h1 {
   margin: 0;
 }
 
+
+
+
+/* certificate */
+.certificates {
+  color: #e0e0e0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1F2833;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 28vh;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    
+  }
+  
+  .card-content {
+    width: auto;
+    height: auto;
+    background-color: #f1e3e3;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card h3 {
+    margin: 0 0 10px;
+  }
+  
+  .card p {
+    color: #555;
+  }
+
+  .row img{
+    width: 50px;
+  }
+  .btn :hover{
+    width: 60px;
+    transition: 0.3s ease-in;
+    transform: scale(1,1);
+ 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 /* Smooth hover effect */
 /* Basic styles for tech-card and tech-content */
-
-
-
-
-
-
 
 /* conatct form */
 .contact-form {

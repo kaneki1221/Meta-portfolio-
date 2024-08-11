@@ -304,16 +304,16 @@ gsap.from(".animated-text", {
 });
 // hamburger
 
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const mainNav = document.querySelector(".main-nav");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const hamburger = document.getElementById("hamburger");
+//   const mainNav = document.querySelector(".main-nav");
 
-  hamburger.addEventListener("click", () => {
-    // Toggle the active class on both menu and icon
-    mainNav.classList.toggle("active");
-    hamburger.classList.toggle("header-nav-active");
-  });
-});
+//   hamburger.addEventListener("click", () => {
+//     // Toggle the active class on both menu and icon
+//     mainNav.classList.toggle("active");
+//     hamburger.classList.toggle("header-nav-active");
+//   });
+// });
 
 // scroll
 

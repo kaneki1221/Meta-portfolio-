@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
-@import url("//unpkg.com/element-ui@2.15.14/lib/theme-chalk/index.css");
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+
 @media (max-width: 1079px) {
     span{
         display:flex ;
@@ -46,13 +42,49 @@
 }
 
 @media (max-width: 480px) {
-    .skill-item {
+  .toggle{
+    display: none;
+  }
+  #short-intro {
+    width: 50%;
+    background-color: #756868 !important;
+  }
+  #social {
+    display: flex;
+    gap: 20px;
+    width: 300px;
+  }
+  .icon {
+    width: 200px;
+    height: auto;
+  }
+
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #lottie-animation {
+    width: 300px;
+    height: 400px;
+  }
+ .skill-item {
         flex: 1 1 calc(100% - 1rem); /* Full width minus spacing on small screens */
         max-width: calc(100% - 1rem); /* Full width minus spacing on small screens */
     }
+    .card{
+      width: 100%;
+      height:200px ;
+    }
 .card>img{
-  width: 2px !important;
-
+  width: 100%;
+  height:auto;
+}
+.project-card {
+  width: calc(100% - 1rem); /* Full width minus spacing on small screens */
+  max-width: calc(100% - 1rem); /* Full width minus spacing on small screens */
 }
 
 }
@@ -64,72 +96,13 @@
     }
 }
 
-
-
-@media (max-width: 480px) {
-    .project-card {
-        width: calc(100% - 1rem); /* Full width minus spacing on small screens */
-        max-width: calc(100% - 1rem); /* Full width minus spacing on small screens */
-    }
-}
-.certificates {
-  color: #e0e0e0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    background-color: #1F2833;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    width: 28vh;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .card-content {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .card h3 {
-    margin: 0 0 10px;
-  }
-  
-  .card p {
-    color: #555;
-  }
-
-  .row img{
-    width: 50px;
-  }
-  .btn :hover{
-    width: 60px;
-    transition: 0.3s ease-in;
-    transform: scale(1,1);
- 
-  }
   
   
   @media (max-width: 768px) {
     .card {
       width: 100%;
       margin: 10px 0;
+      height: 100px;
     }
   }
 
@@ -365,10 +338,4 @@ background-color: #35A29E;
 
 
 
-/* hamburger *//* Hamburger */
-@media (max-width: 480px) {
-  .toggle{
-    display: none;
-  }
 
-}
