@@ -1,4 +1,6 @@
+
 window.addEventListener("load", () => {
+
   const timeline = gsap.timeline();
 
   // Header slide-in animation
@@ -21,7 +23,7 @@ window.addEventListener("load", () => {
     "#ffb833",
     "#a1ff33",
   ];
-
+  
   timeline.from(
     ".myname",
     {
