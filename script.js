@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 window.addEventListener("load", () => {
   const timeline = gsap.timeline();
 
@@ -35,11 +36,11 @@ window.addEventListener("load", () => {
           repeat: -1,
           yoyo: true,
           ease: "power1.inOut",
-          onUpdate: function () {
-            gsap.set(".myname strong", {
-              textShadow: `0 0 5px ${gsap.getProperty(".myname strong", "color")}`,
-            });
-          },
+          // onUpdate: function () {
+          //   gsap.set(".myname strong", {
+          //     textShadow: `0 0 5px ${gsap.getProperty(".myname strong", "color")}`,
+          //   });
+          // },
           onComplete: () => {
             gsap.to(".myname strong", {
               color: "#000",
@@ -255,8 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
 // scroll
 
 const showAnim = gsap
@@ -301,8 +300,6 @@ ScrollTrigger.create({
   },
 });
 
-gsap.registerPlugin(ScrollTrigger);
-
 gsap.fromTo(
   ".tech-card",
   { opacity: 0, y: 50 },
@@ -313,8 +310,8 @@ gsap.fromTo(
     stagger: 0.3,
     scrollTrigger: {
       trigger: ".tech-card",
-      start: "top 70%",
-      end: "bottom 20%",
+      start: "top 100%",
+      end: "top 40%",
       scrub: true,
       markers: false,
     },
@@ -331,7 +328,7 @@ gsap.fromTo(
     stagger: 0.2,
     scrollTrigger: {
       trigger: ".tech-content",
-      start: "top 80%",
+      start: "top 100%",
       end: "bottom 40%",
       scrub: true,
       markers: false,
@@ -364,7 +361,6 @@ document.querySelectorAll(".social-icons a").forEach((icon) => {
   });
 });
 // certificate
-gsap.registerPlugin(ScrollTrigger);
 
 // Animate the card
 gsap.fromTo(
@@ -378,12 +374,12 @@ gsap.fromTo(
     opacity: 1,
     y: 0,
     scale: 1,
-    duration: 1,
+    duration: 0.6,
     stagger: 0.2,
     scrollTrigger: {
       trigger: ".certificates",
-      start: "top 80%",
-      end: "bottom 20%",
+      start: "top 100%",
+      end: "bottom 60%",
       toggleActions: "play reverse play reverse",
       markers: false,
     },
@@ -401,12 +397,12 @@ gsap.fromTo(
     opacity: 1,
     x: 0,
     scale: 1,
-    duration: 1,
+    duration: 0.6,
     stagger: 0.2,
     scrollTrigger: {
       trigger: ".certificates",
-      start: "top 80%",
-      end: "bottom 20%",
+      start: "top 100%",
+      end: "bottom 60%",
       toggleActions: "play reverse play reverse",
       markers: false,
     },
@@ -422,12 +418,12 @@ gsap.fromTo(
   {
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: 0.6,
     stagger: 0.3,
     scrollTrigger: {
       trigger: ".certificates",
-      start: "top 80%",
-      end: "bottom 20%",
+      start: "top 100%",
+      end: "bottom 60%",
       toggleActions: "play reverse play reverse",
       markers: false,
     },
