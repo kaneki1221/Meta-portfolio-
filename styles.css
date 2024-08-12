@@ -305,7 +305,7 @@ h4 {
 .projects-section {
   padding: 2rem;
   /* background-color: #503f3f; */
-  background-color: #1f1f1f;
+  background-color: #1b1919;
   flex-wrap: wrap;
   color: #ddd;
 }
@@ -560,6 +560,82 @@ header h1 {
   color: #c5c8d4;
   margin: 0;
 }
+/* project */
+
+.project_container{
+  padding-top: 20vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  
+  gap: 30px;
+ 
+}
+
+.project_card {
+  padding: 20px;
+  width: 300px;
+  min-height: 370px;
+  border-radius: 20px;
+  background: #1d1e22;
+
+  transition: 0.4s;
+}
+
+.project_card:hover {
+  translate: 0 -10px;
+}
+
+.project_title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b2eccf;
+  margin: 15px 0 0 10px;
+}
+
+.project_img {
+  min-height: 170px;
+  background-color: #313131;
+  border-radius: 15px;
+  background: #313131;
+  box-shadow: inset 5px 5px 3px #2f2f2f,
+            inset -5px -5px 3px #333333;
+}
+
+.project_desc {
+  margin: 13px 0 0 10px;
+  color: rgb(184, 184, 184);
+  font-size: 15px;
+}
+
+.footer {
+  float: right;
+  margin: 28px 0 0 18px;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+.by-name {
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* certificate section */
 .certificates {
@@ -690,6 +766,11 @@ header h1 {
   .container-education{
     background-color: #1f1f1f;
     min-width: 340px;
+  }
+  .container-project{
+    background-color: #1b1919;
+    min-width: 340px;
+ 
   }
   
   
@@ -989,17 +1070,11 @@ header h1 {
   width: 100%;
   height:auto;
 }
-.project-card {
-  width: calc(100% - 1rem); 
-  max-width: calc(100% - 1rem); 
-}
+
 
 }
 @media (max-width: 768px) {
-    .project-card {
-        width: calc(50% - 1rem); 
-        max-width: calc(50% - 1rem); 
-    }
+ 
     .card {
       width: 100%;
       margin: 10px 0;

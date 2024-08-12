@@ -130,18 +130,18 @@ const target = document.querySelector("#particles-js");
 observer.observe(target);
 
 // Toggle Particle.js
-document.getElementById('btn').addEventListener('change', function() {
-  if (this.checked) {
-    initParticles();
-  } else {
-    // Clear particles if the toggle is off
-    const canvas = document.querySelector('#particles-js canvas');
-    if (canvas) {
-      canvas.remove(); // Remove the canvas element
-      document.querySelector('#particles-js').innerHTML = ''; // Clear the container
-    }
-  }
-});
+// document.getElementById('btn').addEventListener('change', function() {
+//   if (this.checked) {
+//     initParticles();
+//   } else {
+//     // Clear particles if the toggle is off
+//     const canvas = document.querySelector('#particles-js canvas');
+//     if (canvas) {
+//       canvas.remove(); // Remove the canvas element
+//       document.querySelector('#particles-js').innerHTML = ''; // Clear the container
+//     }
+//   }
+// });
 
-// Initialize particles on page load
-initParticles();
+// // Initialize particles on page load
+// initParticles();
