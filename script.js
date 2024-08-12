@@ -1,9 +1,6 @@
-
 window.addEventListener("load", () => {
-
   const timeline = gsap.timeline();
 
-  // Header slide-in animation
   timeline.from(".header-main", {
     duration: 1,
     y: "-100%",
@@ -13,7 +10,6 @@ window.addEventListener("load", () => {
     onComplete: updateHeaderStyle,
   });
 
-  // Animate the .mymyname with effects
   const colors = [
     "#ff5733",
     "#33ff57",
@@ -23,7 +19,7 @@ window.addEventListener("load", () => {
     "#ffb833",
     "#a1ff33",
   ];
-  
+
   timeline.from(
     ".myname",
     {
@@ -33,24 +29,21 @@ window.addEventListener("load", () => {
       scale: 1,
       ease: "power2.out",
       onComplete: () => {
-        // Continuous gradient color animation with smoother transitions
         gsap.to(".myname strong", {
-          color: () => `hsl(${Math.random() * 360}, 70%, 50%)`, // Dynamic color
-          duration: 2, // Extended duration for smoother transitions
+          color: () => `hsl(${Math.random() * 360}, 70%, 50%)`,
+          duration: 2,
           repeat: -1,
           yoyo: true,
           ease: "power1.inOut",
           onUpdate: function () {
-            // Add a subtle text-shadow effect to enhance readability
             gsap.set(".myname strong", {
               textShadow: `0 0 5px ${gsap.getProperty(".myname strong", "color")}`,
             });
           },
           onComplete: () => {
-            // Set the final color to a dark shade for visibility against white
             gsap.to(".myname strong", {
-              color: "#000", // Dark color for visibility
-              duration: 0.5,
+              color: "#000",
+              duration: 0.8,
               scale: 1.2,
               ease: "power1.inOut",
             });
@@ -61,11 +54,10 @@ window.addEventListener("load", () => {
     "-=0.5"
   );
 
-  // Animate the navigation items with more engaging effects
   timeline.from(
     ".nav-item",
     {
-      duration: 1.2,
+      duration: 0.6,
       opacity: 0,
       y: 40,
       stagger: {
@@ -77,10 +69,8 @@ window.addEventListener("load", () => {
     "-=0.5"
   );
 
-  // Get the viewport height
   const viewportHeight = window.innerHeight;
 
-  // Profile picture fall and bounce animation
   timeline.fromTo(
     ".pfp",
     { y: -viewportHeight / 2, scale: 0, opacity: 0 },
@@ -88,19 +78,18 @@ window.addEventListener("load", () => {
       y: 0,
       scale: 1,
       opacity: 1,
-      duration: 1.2,
+      duration: 0.6,
       ease: "bounce.out",
     },
     "-=1"
   );
 
-  // Icons animation - starts after profile picture animation
   timeline.fromTo(
     "#social .icon",
     {
       x: (i) => (i % 2 === 0 ? -150 : 150),
       opacity: 0,
-      scale: 0.5,
+      scale: 0.6,
       rotationY: 45,
       skewX: 10,
       filter: "blur(10px)",
@@ -113,7 +102,7 @@ window.addEventListener("load", () => {
       skewX: 0,
       filter: "blur(0px)",
       stagger: {
-        amount: 1,
+        amount: 0.2,
         from: "edges",
         ease: "back.out(1.1)",
       },
@@ -126,32 +115,25 @@ window.addEventListener("load", () => {
 
 // endAnimation
 
-// Function to update header style based on scroll position
 function updateHeaderStyle() {
   const header = document.querySelector(".header-main");
   const scrollPosition = window.scrollY;
   const viewportHeight = window.innerHeight;
 
-  // Define the scroll position where styles change
-  const transparentThreshold = viewportHeight; // Height of the viewport for transparent header
+  const transparentThreshold = viewportHeight;
 
   if (scrollPosition < transparentThreshold) {
-    // Header in the top section
     header.classList.add("transparent");
     header.classList.remove("colored");
   } else {
-    // Header in other sections
     header.classList.remove("transparent");
     header.classList.add("colored");
   }
 }
 
-// Update header style on scroll
 window.addEventListener("scroll", updateHeaderStyle);
 
 // end
-
-// icons animation
 
 // smooth nav-links-forward
 
@@ -173,19 +155,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   const navItems = document.querySelectorAll(".nav-item");
   const options = {
-    threshold: 0.5, // Trigger when at least 50% of the section is in view
+    threshold: 0.5,
   };
 
   let currentActive = null;
 
-  // Observer callback to handle section visibility
   const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Add 'visible' class to make the section visible
         entry.target.classList.add("visible");
 
-        // Highlight the corresponding navigation item
         const id = entry.target.id;
         navItems.forEach((item) => {
           if (item.getAttribute("href").substring(1) === id) {
@@ -198,13 +177,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  // Initialize observer
   const observer = new IntersectionObserver(observerCallback, options);
 
-  // Observe each section
   sections.forEach((section) => observer.observe(section));
 
-  // Smooth scroll for navigation links
   navItems.forEach((item) => {
     item.addEventListener("click", function (e) {
       e.preventDefault();
@@ -224,23 +200,23 @@ var animations = [
   },
   {
     container: "icon-container-2",
-    path: "icons8-instagram.json", // Replace with your path
+    path: "icons8-instagram.json",
   },
   {
     container: "icon-container-3",
-    path: "icons8-linked-in.json", // Replace with your path
+    path: "icons8-linked-in.json",
   },
   {
     container: "icon-container-4",
-    path: "icons8-twitter.json", // Replace with your path
+    path: "icons8-twitter.json",
   },
   {
     container: "icon-container-5",
-    path: "icons8-gmail.json", // Replace with your path
+    path: "icons8-gmail.json",
   },
   {
     container: "icon-container-6",
-    path: "icons8-facebook.json", // Replace with your path
+    path: "icons8-facebook.json",
   },
 ];
 
@@ -252,7 +228,6 @@ animations.forEach(function (animationConfig) {
     loop: true,
     autoplay: true,
     path: animationConfig.path,
-    
   });
 
   var iconContainer = document.getElementById(animationConfig.container);
@@ -264,59 +239,23 @@ animations.forEach(function (animationConfig) {
 
   iconContainer.addEventListener("mouseout", function () {
     // animation.stop();
-    iconContainer.style.transform = "scale(1.1)"; // Reset scale on mouse out
+    iconContainer.style.transform = "scale(1.1)";
   });
 });
-
-// end
-
-// script.js
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("lottie-animation");
 
-  // Load the Lottie animation
   const animation = lottie.loadAnimation({
-    container: container, // The container where the animation will be rendered
-    renderer: "svg", // Use 'svg', 'canvas', or 'html' renderer
-    loop: true, // Loop the animation
-    autoplay: true, // Start playing the animation immediately
-    path: "https://lottie.host/041c70e1-6871-4995-a422-4c1cde7a9559/xD2beFK0WV.json", // URL to the Lottie JSON file
+    container: container,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "https://lottie.host/041c70e1-6871-4995-a422-4c1cde7a9559/xD2beFK0WV.json",
   });
 });
 
-// script.js
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
 
-// Set up ScrollTrigger for animation
-gsap.from(".animated-text", {
-  opacity: 1,
-  y: 90,
-  duration: 2,
-  ease: "power2.out",
-  stagger: 0.1,
-  scrollTrigger: {
-    trigger: ".animated-text", // The element that triggers the animation
-    start: "top 70%", // When the top of the element is 80% from the top of the viewport
-    end: "bottom 20%", // Animation will end when the bottom of the element is 20% from the top of the viewport
-    scrub: true, // Optional: Smooth animation linked to scrolling position
-    onEnter: () => console.log("Animation Started!"), // Optional: Log when animation starts
-    onLeave: () => console.log("Animation Ended!"), // Optional: Log when animation ends
-  },
-});
-// hamburger
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const hamburger = document.getElementById("hamburger");
-//   const mainNav = document.querySelector(".main-nav");
-
-//   hamburger.addEventListener("click", () => {
-//     // Toggle the active class on both menu and icon
-//     mainNav.classList.toggle("active");
-//     hamburger.classList.toggle("header-nav-active");
-//   });
-// });
 
 // scroll
 
@@ -339,7 +278,6 @@ ScrollTrigger.create({
     // Check if we're at the top of the page
     if (self.scroll() <= 1) {
       if (!isAtTop) {
-        // If we were not at the top and now we're back, reset the animation
         isAtTop = true;
         showAnim.progress(1).pause();
         clearTimeout(timer);
@@ -348,21 +286,21 @@ ScrollTrigger.create({
       isAtTop = false;
       if (self.direction === -1) {
         showAnim.play();
-        // Clear any existing timer when scrolling up
+
         clearTimeout(timer);
         timer = setTimeout(() => {
           showAnim.pause();
           gsap.set(".header-main", { yPercent: -100 });
-        }, 1700); // 3 seconds delay
+        }, 1700);
       } else {
         showAnim.reverse();
-        // Clear the timer when scrolling down
+
         clearTimeout(timer);
       }
     }
   },
 });
-// skill  gsap.registerPlugin(ScrollTrigger);
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(
@@ -378,7 +316,7 @@ gsap.fromTo(
       start: "top 70%",
       end: "bottom 20%",
       scrub: true,
-      markers: false, // Set to true for debugging
+      markers: false,
     },
   }
 );
@@ -396,25 +334,21 @@ gsap.fromTo(
       start: "top 80%",
       end: "bottom 40%",
       scrub: true,
-      markers: false, // Set to true for debugging
+      markers: false,
     },
   }
 );
-// hover
 
-// contact form
-// Animate the form on page load
 gsap.fromTo(
   ".contact-form",
   { y: 50, opacity: 0 },
   { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
 );
 
-// Animate the social icons on hover
 document.querySelectorAll(".social-icons a").forEach((icon) => {
   icon.addEventListener("mouseenter", () => {
     gsap.to(icon, {
-      scale: 1.8,
+      scale: 2,
       color: "#007bff",
       duration: 0.2,
       ease: "power2.out",
@@ -456,7 +390,6 @@ gsap.fromTo(
   }
 );
 
-// Animate the images inside the cards
 gsap.fromTo(
   ".card img",
   {
@@ -480,7 +413,6 @@ gsap.fromTo(
   }
 );
 
-// Animate the text inside the cards
 gsap.fromTo(
   ".card-content",
   {
