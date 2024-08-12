@@ -250,6 +250,7 @@ animations.forEach(function (animationConfig) {
     loop: true,
     autoplay: true,
     path: animationConfig.path,
+    
   });
 
   var iconContainer = document.getElementById(animationConfig.container);
@@ -261,7 +262,7 @@ animations.forEach(function (animationConfig) {
 
   iconContainer.addEventListener("mouseout", function () {
     // animation.stop();
-    iconContainer.style.transform = "scale(1)"; // Reset scale on mouse out
+    iconContainer.style.transform = "scale(1.1)"; // Reset scale on mouse out
   });
 });
 
@@ -426,19 +427,20 @@ document.querySelectorAll(".social-icons a").forEach((icon) => {
     });
   });
 });
-// certificate 
+// certificate
 gsap.registerPlugin(ScrollTrigger);
 
 // Animate the card
-gsap.fromTo(".card", 
+gsap.fromTo(
+  ".card",
   {
-    opacity: 0, 
-    y: 50, 
-    scale: 0.9
-  }, 
+    opacity: 0,
+    y: 50,
+    scale: 0.9,
+  },
   {
-    opacity: 1, 
-    y: 0, 
+    opacity: 1,
+    y: 0,
     scale: 1,
     duration: 1,
     stagger: 0.2,
@@ -447,21 +449,22 @@ gsap.fromTo(".card",
       start: "top 80%",
       end: "bottom 20%",
       toggleActions: "play reverse play reverse",
-      markers: false
-    }
+      markers: false,
+    },
   }
 );
 
 // Animate the images inside the cards
-gsap.fromTo(".card img", 
+gsap.fromTo(
+  ".card img",
   {
-    opacity: 0, 
-    x: -50, 
-    scale: 0.8
-  }, 
+    opacity: 0,
+    x: -50,
+    scale: 0.8,
+  },
   {
-    opacity: 1, 
-    x: 0, 
+    opacity: 1,
+    x: 0,
     scale: 1,
     duration: 1,
     stagger: 0.2,
@@ -470,19 +473,20 @@ gsap.fromTo(".card img",
       start: "top 80%",
       end: "bottom 20%",
       toggleActions: "play reverse play reverse",
-      markers: false
-    }
+      markers: false,
+    },
   }
 );
 
 // Animate the text inside the cards
-gsap.fromTo(".card-content", 
+gsap.fromTo(
+  ".card-content",
   {
-    opacity: 0, 
-    y: 50
-  }, 
+    opacity: 0,
+    y: 50,
+  },
   {
-    opacity: 1, 
+    opacity: 1,
     y: 0,
     duration: 1,
     stagger: 0.3,
@@ -491,7 +495,7 @@ gsap.fromTo(".card-content",
       start: "top 80%",
       end: "bottom 20%",
       toggleActions: "play reverse play reverse",
-      markers: false
-    }
+      markers: false,
+    },
   }
 );

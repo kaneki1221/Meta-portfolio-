@@ -102,9 +102,16 @@ h4 {
 }
 
 /* intro animation  */
+
+.intro-box{
+ 
+  height: auto;
+  height: auto;
+
+}
 .pfp {
   align-items: center;
-  width: 12rem;
+  width: 20vh;
   height: auto;
   opacity: 0; /* Initially hidden */
   transform: scale(0); /* Initially scaled down */
@@ -397,10 +404,11 @@ label[for="btn"]:after {
 }
 
 .wrapper {
-  max-width: 1300px;
+  max-width: 1200px;
   width: 90%;
   margin: 0 auto;
   padding: 20px;
+  height: auto;
 }
 
 .nav-list a {
@@ -440,7 +448,6 @@ label[for="btn"]:after {
 #lottie-animation {
   padding-top: 1vh;
   width: 70vh;
-  
 }
 
 /* projects seciton */
@@ -543,7 +550,8 @@ figure {
 #social {
   display: flex;
 
-  width: 40%;
+  width: 40vh;
+  height: auto;
   justify-content: center;
   align-items: center;
 }
@@ -613,12 +621,14 @@ canvas {
 
 .header-main {
   display: flex;
+  justify-content: center;
+
   top: 0;
   flex-wrap: wrap;
   text-align: center;
   align-items: center;
   margin: 0% auto;
-  justify-content: center;
+
   background: transparent;
   transition:
     box-shadow 0.3s ease,
@@ -755,6 +765,7 @@ header h1 {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  gap: 2rem;
   background-color: #1f2833;
 }
 
@@ -762,7 +773,7 @@ header h1 {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 10px;
+
   width: 28vh;
   overflow: hidden;
   transition:
@@ -773,7 +784,9 @@ header h1 {
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Hover effect for the image */
@@ -840,6 +853,7 @@ header h1 {
 .social-icons {
   display: flex;
   flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
   margin-bottom: 15px;
 }
